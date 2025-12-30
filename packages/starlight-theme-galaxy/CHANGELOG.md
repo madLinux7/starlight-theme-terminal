@@ -1,5 +1,11 @@
 # starlight-theme-galaxy
 
+## 0.6.0
+
+### Minor Changes
+
+- [`5bb2bb3`](https://github.com/frostybee/starlight-theme-galaxy/commit/5bb2bb33a90dd7b954e5306d46bea8147d6bedf0) Thanks [@frostybee](https://github.com/frostybee)! - Fix issue with links not showing on card components and improve aside styles
+
 ## 0.5.2
 
 ### Patch Changes

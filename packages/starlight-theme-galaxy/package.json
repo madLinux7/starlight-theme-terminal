@@ -1,6 +1,6 @@
 {
   "name": "starlight-theme-galaxy",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "license": "MIT",
   "description": "A customized Astro Starlight theme for publishing docs and educational content.",
   "author": "frostybee",
@@ -32,7 +32,7 @@
   },
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
-  },  
+  },
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -47,7 +47,7 @@
     "documentation",
     "astro"
   ],
-  "homepage": "https://frostybee.github.io/starlight-theme-galaxy",  
+  "homepage": "https://frostybee.github.io/starlight-theme-galaxy",
   "repository": {
     "type": "git",
     "url": "https://github.com/frostybee/starlight-theme-galaxy.git",

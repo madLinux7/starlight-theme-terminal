@@ -24,7 +24,7 @@
     "build:docs": "pnpm -F starlight-theme-galaxy-docs build",
     "lint": "astro check --noSync && pnpm -r lint",
     "ci-version": "changeset version && pnpm install --no-frozen-lockfile",
-    "ci-publish": "pnpm build && changeset publish"
+    "ci-publish": "changeset publish"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",

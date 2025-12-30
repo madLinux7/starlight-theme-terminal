@@ -64,12 +64,25 @@
     border: var(--galaxy-card-border);
     border-radius: var(--galaxy-card-border-radius);
     box-shadow: var(--galaxy-card-shadow);
-    transition: var(--galaxy-card-transition-fast);
+    transition:
+        transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.25s ease;
     transform: translateZ(0);
     display: block;
     padding: 1.7rem;
     text-decoration: none;
     color: var(--sl-color-gray-1);
+}
+
+/* Refined card hover */
+.card:hover {
+    transform: translateY(-2px) translateZ(0);
+    border-color: rgba(var(--sl-color-accent), 0.2);
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 
@@ -118,11 +131,27 @@
     gap: 0.5rem;
 }
 
-/* Icon styling */
+/* Icon styling - refined with subtle background */
 .card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
     color: var(--sl-color-accent);
-    filter: drop-shadow(0 0 8px rgba(var(--sl-color-accent), 0.3));
-    transition: var(--galaxy-icon-transition);
+    background: rgba(var(--sl-color-accent), 0.08);
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 0 6px rgba(var(--sl-color-accent), 0.15));
+    transition:
+        filter 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.card:hover .icon {
+    filter: drop-shadow(0 0 10px rgba(var(--sl-color-accent), 0.25));
+    background: rgba(var(--sl-color-accent), 0.12);
+    transform: scale(1.05);
 }
 
 
@@ -203,20 +232,25 @@
     transition: var(--galaxy-transform-transition);
 }
 
-/* LinkCard hover effects */
+/* LinkCard hover effects - refined */
 .sl-link-card:hover {
-    box-shadow: var(--galaxy-card-shadow-hover);
+    transform: translateY(-2px);
+    border-color: rgba(var(--sl-color-accent), 0.2);
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .sl-link-card:hover::before {
     background: var(--galaxy-accent-highlight-hover);
     height: 2px;
-    box-shadow: 0 0 8px rgba(var(--sl-color-accent), 0.4);
+    box-shadow: 0 0 6px rgba(var(--sl-color-accent), 0.3);
 }
 
 .sl-link-card:hover .icon {
-    transform: translateX(4px);
-    filter: drop-shadow(0 0 12px rgba(var(--sl-color-accent), 0.5));
+    transform: translateX(3px);
+    filter: drop-shadow(0 0 8px rgba(var(--sl-color-accent), 0.35));
 }
 
 /* Enhanced focus states for accessibility */
@@ -506,26 +540,26 @@
     flex-shrink: 0;
     transition: var(--galaxy-transform-transition);
   }
-  
+
   /* Hover effects for primary */
   .sl-link-button.primary:hover {
     transform: var(--galaxy-button-hover-transform);
     box-shadow: var(--galaxy-button-shadow-primary-hover);
     background: var(--galaxy-button-primary-gradient-hover);
   }
-  
+
   .sl-link-button.primary:hover::before {
-    background: linear-gradient(90deg, 
-      transparent, 
-      rgba(255, 255, 255, 0.6), 
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
       transparent);
     height: 2px;
   }
-  
+
   .sl-link-button.primary:hover svg {
     transform: scale(1.1);
   }
-  
+
   /* Hover effects for secondary */
   .sl-link-button.secondary:hover {
     transform: var(--galaxy-button-hover-transform);
@@ -534,25 +568,25 @@
     border-color: rgba(255, 255, 255, 0.3);
     color: var(--sl-color-white);
   }
-  
+
   .sl-link-button.secondary:hover::before {
-    background: linear-gradient(90deg, 
-      transparent, 
-      rgba(255, 255, 255, 0.4), 
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
       transparent);
     height: 2px;
   }
-  
+
   .sl-link-button.secondary:hover svg {
     transform: scale(1.1);
   }
-  
+
   /* Hover effects for minimal */
   .sl-link-button.minimal:hover {
     color: var(--sl-color-accent-high);
     background: rgba(var(--sl-color-accent), 0.1);
   }
-  
+
   .sl-link-button.minimal:hover svg {
     transform: translateX(2px);
   }

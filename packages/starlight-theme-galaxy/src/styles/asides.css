@@ -9,19 +9,19 @@
   --galaxy-aside-gap: 0.75rem;
   --galaxy-aside-border-width: 1px;
   --galaxy-aside-accent-width: 3px;
-  
-  /* Advanced shadow system */
-  --galaxy-aside-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --galaxy-aside-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --galaxy-aside-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
-  
+
+  /* Refined shadow system - softer */
+  --galaxy-aside-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --galaxy-aside-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --galaxy-aside-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+
   /* Modern animation timing */
-  --galaxy-aside-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
+  --galaxy-aside-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
   /* Typography scale */
-  --galaxy-aside-title-size: 0.95rem;
+  --galaxy-aside-title-size: 0.9rem;
   --galaxy-aside-content-size: 0.9rem;
-  --galaxy-aside-icon-size: 1.25rem;
+  --galaxy-aside-icon-size: 1.125rem;
 }
 
 /* Dark theme adjustments */
@@ -62,9 +62,9 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      var(--galaxy-aside-accent) 50%, 
+    background: linear-gradient(90deg,
+      transparent 0%,
+      var(--galaxy-aside-accent) 50%,
       transparent 100%);
     opacity: 0.6;
   }
@@ -139,14 +139,14 @@
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  
+
   /* Title underline effect */
   &::after {
     content: '';
     flex-grow: 1;
     height: 1px;
-    background: linear-gradient(90deg, 
-      var(--galaxy-aside-accent) 0%, 
+    background: linear-gradient(90deg,
+      var(--galaxy-aside-accent) 0%,
       transparent 100%);
     margin-left: 0.75rem;
     opacity: 0.3;

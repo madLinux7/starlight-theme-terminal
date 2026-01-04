@@ -1,5 +1,14 @@
 # starlight-theme-galaxy
 
+## 0.7.0
+
+### Minor Changes
+
+- [`13212d5`](https://github.com/frostybee/starlight-theme-galaxy/commit/13212d5b7a22931bb33e6a562603e07cc528a156) Thanks [@frostybee](https://github.com/frostybee)! - Bug fixes and style improvements:
+  - Reduced the height of code block headers for a more compact appearance.
+  - Fixed table styles.
+  - Removed outline around card component icons.
+
 ## 0.6.0
 
 ### Minor Changes

@@ -2,13 +2,14 @@ import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
 import starlightThemeGalaxy from 'starlight-theme-galaxy'
 
+
 export default defineConfig({
   site: 'https://frostybee.github.io/starlight-theme-galaxy',
   base: '/starlight-theme-galaxy',
   integrations: [
     starlight({
       title: 'Starlight Galaxy',
-      favicon: '/favicon.svg',   
+      favicon: '/favicon.svg',
       // defaultLocale: 'en',
       // locales: {
       //   en: {

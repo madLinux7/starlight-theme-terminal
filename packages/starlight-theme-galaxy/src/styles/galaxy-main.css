@@ -404,7 +404,7 @@ body {
   color: var(--sl-color-accent-high);
   padding: 0.2em 0.4em;
   border-radius: var(--sl-border-radius-sm);
-  font-size: 0.775em;
+  font-size: 0.785em;
   font-weight: 500;
   border: 1px solid var(--sl-color-gray-6);
 }
@@ -868,106 +868,110 @@ body {
 * Table style overrides
 * ---------------------
 */
-/* Galaxy Table Styling */
+/* Galaxy Table Styling - only visual, no layout changes */
 .sl-markdown-content table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
   line-height: 1.6;
-  overflow: hidden;
   margin: 1.5rem 0;
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--sl-color-accent), 0.4) transparent;
+}
 
-  /* Code within tables */
-  code {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    background: rgba(var(--sl-color-accent), 0.1);
-    padding: 0.2em 0.4em;
-    border-radius: 0.25rem;
-    font-size: 0.875em;
-  }
+/* Webkit scrollbar (Chrome, Safari, Edge) */
+.sl-markdown-content table::-webkit-scrollbar {
+  height: 6px;
+}
 
-  /* Header styling */
-  thead th {
-    background: linear-gradient(135deg,
-        rgba(var(--sl-color-accent), 0.15) 0%,
-        rgba(var(--sl-color-accent), 0.08) 100%);
-    color: var(--sl-color-white);
-    font-weight: 600;
-    text-align: left;
-    position: relative;
-  }
+.sl-markdown-content table::-webkit-scrollbar-track {
+  background: rgba(var(--sl-color-gray-5), 0.3);
+  border-radius: 3px;
+}
 
-  thead th::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--galaxy-accent-highlight);
-  }
+.sl-markdown-content table::-webkit-scrollbar-thumb {
+  background: rgba(var(--sl-color-accent), 0.4);
+  border-radius: 3px;
+}
 
-  /* Cell styling */
-  :is(th, td):not(:where(.not-content *)) {
-    padding: 0.75rem 1rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
-    vertical-align: top;
-  }
+.sl-markdown-content table::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--sl-color-accent), 0.6);
+}
 
-  /* Remove right border from last column */
-  :is(th:last-child, td:last-child):not(:where(.not-content *)) {
-    border-right: none;
-  }
 
-  /* Zebra striping for better readability */
-  tbody tr:nth-child(even):not(:where(.not-content *)) {
-    background: var(--sl-color-gray-8);
-  }
+/* Header styling */
+.sl-markdown-content table thead th {
+  background: linear-gradient(135deg,
+      rgba(var(--sl-color-accent), 0.15) 0%,
+      rgba(var(--sl-color-accent), 0.08) 100%);
+  color: var(--sl-color-white);
+  font-weight: 600;
+  text-align: left;
+  position: relative;
+}
 
-  /* Hover effect for table rows */
-  tbody tr:hover:not(:where(.not-content *)) {
-    background: rgba(var(--sl-color-accent), 0.05);
-    transition: var(--galaxy-card-transition-fast);
-  }
+.sl-markdown-content table thead th::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--galaxy-accent-highlight);
+}
 
-  /* Responsive table wrapper */
-  @media (max-width: 50rem) {
+/* Cell styling */
+.sl-markdown-content table :is(th, td):not(:where(.not-content *)) {
+  padding: 0.75rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: top;
+}
+
+/* Remove right border from last column */
+.sl-markdown-content table :is(th:last-child, td:last-child):not(:where(.not-content *)) {
+  border-right: none;
+}
+
+/* Zebra striping for better readability */
+.sl-markdown-content table tbody tr:nth-child(even):not(:where(.not-content *)) {
+  background: var(--sl-color-gray-8);
+}
+
+/* Hover effect for table rows */
+.sl-markdown-content table tbody tr:hover:not(:where(.not-content *)) {
+  background: rgba(var(--sl-color-accent), 0.05);
+  transition: var(--galaxy-card-transition-fast);
+}
+
+/* Responsive table */
+@media (max-width: 50rem) {
+  .sl-markdown-content table {
     font-size: 0.875rem;
+  }
 
-    :is(th, td):not(:where(.not-content *)) {
-      padding: 0.5rem 0.75rem;
-    }
+  .sl-markdown-content table :is(th, td):not(:where(.not-content *)) {
+    padding: 0.5rem 0.75rem;
   }
 }
 
 /* Light theme adjustments for tables */
-:root[data-theme='light'] .sl-markdown-content table {
-
-  thead th {
-    background: linear-gradient(135deg,
-        rgba(var(--sl-color-accent), 0.12) 0%,
-        rgba(var(--sl-color-accent), 0.06) 100%);
-    color: var(--sl-color-gray-1);
-  }
-
-  :is(th, td):not(:where(.not-content *)) {
-    border-right-color: rgba(0, 0, 0, 0.08);
-  }
-
-  tbody tr:nth-child(even):not(:where(.not-content *)) {
-    background: var(--sl-color-gray-8);
-  }
-
-  tbody tr:hover:not(:where(.not-content *)) {
-    background: rgba(var(--sl-color-accent), 0.08);
-  }
-
-  code {
-    background: rgba(var(--sl-color-accent), 0.12);
-  }
+:root[data-theme='light'] .sl-markdown-content table thead th {
+  background: linear-gradient(135deg,
+      rgba(var(--sl-color-accent), 0.12) 0%,
+      rgba(var(--sl-color-accent), 0.06) 100%);
+  color: var(--sl-color-gray-1);
 }
+
+:root[data-theme='light'] .sl-markdown-content table :is(th, td):not(:where(.not-content *)) {
+  border-right-color: rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme='light'] .sl-markdown-content table tbody tr:nth-child(even):not(:where(.not-content *)) {
+  background: var(--sl-color-gray-8);
+}
+
+:root[data-theme='light'] .sl-markdown-content table tbody tr:hover:not(:where(.not-content *)) {
+  background: rgba(var(--sl-color-accent), 0.08);
+}
+
 
 .main-pane {
   padding: 0 1rem;

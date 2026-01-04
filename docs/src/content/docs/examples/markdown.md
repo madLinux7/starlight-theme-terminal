@@ -78,3 +78,5 @@ Details (also known as “disclosures” or “accordions”) can be used to hid
 The content of the [disclosure](https://starlight.astro.build/guides/authoring-content/#details) that can use any other Markdown syntax.
 
 </details>
+
+

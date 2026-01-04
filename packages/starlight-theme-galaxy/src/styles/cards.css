@@ -132,25 +132,26 @@
 }
 
 /* Icon styling - refined with subtle background */
-.card .icon {
+article.card .icon {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 2rem;
     height: 2rem;
     color: var(--sl-color-accent);
-    background: rgba(var(--sl-color-accent), 0.08);
-    border-radius: 0.5rem;
+    background-color: rgba(var(--sl-color-accent), 0.18) !important;
+    border-radius: 0.5rem !important;
+    border: none !important;
     filter: drop-shadow(0 0 6px rgba(var(--sl-color-accent), 0.15));
     transition:
         filter 0.25s ease,
-        background 0.25s ease,
+        background-color 0.25s ease,
         transform 0.25s ease;
 }
 
-.card:hover .icon {
+article.card:hover .icon {
     filter: drop-shadow(0 0 10px rgba(var(--sl-color-accent), 0.25));
-    background: rgba(var(--sl-color-accent), 0.12);
+    background-color: rgba(var(--sl-color-accent), 0.25) !important;
     transform: scale(1.05);
 }
 

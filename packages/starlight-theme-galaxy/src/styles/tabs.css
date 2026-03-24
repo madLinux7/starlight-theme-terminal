@@ -35,7 +35,7 @@
   --galaxy-tab-focus-shadow: 0 0 0 2px var(--sl-color-accent);
   
   /* Accent line */
-  --galaxy-tabs-accent-line: linear-gradient(90deg, transparent, rgba(var(--sl-color-accent), 0.3), transparent);
+  --galaxy-tabs-accent-line: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 30%, transparent), transparent);
 }
 
 /* Light theme overrides */

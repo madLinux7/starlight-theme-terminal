@@ -29,7 +29,7 @@
   /* Enhanced Header with Glassmorphism */
   [data-has-hero] header {
     border-bottom: 1px solid hsla(var(--purple-hsl), 0.2);
-    background: hsla(var(--sl-color-bg), 0.8);
+    background: color-mix(in srgb, var(--sl-color-bg) 80%, transparent);
     -webkit-backdrop-filter: blur(20px) saturate(1.2);
     backdrop-filter: blur(20px) saturate(1.2);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -167,13 +167,13 @@
   
   /* Secondary Action Button */
   .hero .actions .action[data-variant="secondary"] {
-    background: hsla(var(--sl-color-bg), 0.6);
+    background: color-mix(in srgb, var(--sl-color-bg) 60%, transparent);
     color: var(--sl-color-accent-high);
     border: 1px solid hsla(var(--purple-hsl), 0.3);
   }
   
   .hero .actions .action[data-variant="secondary"]:hover {
-    background: hsla(var(--sl-color-accent), 0.1);
+    background: color-mix(in srgb, var(--sl-color-accent) 10%, transparent);
     border-color: var(--sl-color-accent);
     transform: translateY(-2px);
   }

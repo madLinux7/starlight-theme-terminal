@@ -20,11 +20,11 @@
   --galaxy-card-shadow-light: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.8);
   --galaxy-card-shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   --galaxy-card-shadow-hover-light: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  --galaxy-card-shadow-focus: 0 0 0 4px rgba(var(--sl-color-accent), 0.2), 0 24px 64px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(0, 0, 0, 0.12);
+  --galaxy-card-shadow-focus: 0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent), 0 24px 64px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(0, 0, 0, 0.12);
   
   /* Button shadows */
-  --galaxy-button-shadow-primary: 0 4px 16px rgba(var(--sl-color-accent), 0.25), 0 2px 8px rgba(var(--sl-color-accent), 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  --galaxy-button-shadow-primary-hover: 0 8px 32px rgba(var(--sl-color-accent), 0.4), 0 4px 16px rgba(var(--sl-color-accent), 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --galaxy-button-shadow-primary: 0 4px 16px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), 0 2px 8px color-mix(in srgb, var(--sl-color-accent) 15%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --galaxy-button-shadow-primary-hover: 0 8px 32px color-mix(in srgb, var(--sl-color-accent) 40%, transparent), 0 4px 16px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   --galaxy-button-shadow-secondary: 0 2px 8px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   --galaxy-button-shadow-secondary-hover: 0 6px 24px rgba(0, 0, 0, 0.15), 0 2px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   
@@ -40,7 +40,7 @@
   
   /* Gradients */
   --galaxy-title-gradient: linear-gradient(135deg, var(--sl-color-white), var(--sl-color-accent-high));
-  --galaxy-accent-highlight: linear-gradient(90deg, transparent, rgba(var(--sl-color-accent), 0.3), transparent);
+  --galaxy-accent-highlight: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 30%, transparent), transparent);
   --galaxy-accent-highlight-hover: linear-gradient(90deg, transparent, var(--sl-color-accent), transparent);
   --galaxy-button-primary-gradient: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent-high) 100%);
   --galaxy-button-primary-gradient-hover: linear-gradient(135deg, var(--sl-color-accent-high) 0%, var(--sl-color-accent) 100%);
@@ -78,7 +78,7 @@
 /* Refined card hover */
 .card:hover {
     transform: translateY(-2px) translateZ(0);
-    border-color: rgba(var(--sl-color-accent), 0.2);
+    border-color: color-mix(in srgb, var(--sl-color-accent) 20%, transparent);
     box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.1),
         0 4px 12px rgba(0, 0, 0, 0.06),
@@ -139,10 +139,10 @@ article.card .icon {
     width: 2rem;
     height: 2rem;
     color: var(--sl-color-accent);
-    background-color: rgba(var(--sl-color-accent), 0.18) !important;
+    background-color: color-mix(in srgb, var(--sl-color-accent) 18%, transparent) !important;
     border-radius: 0.5rem !important;
     border: none !important;
-    filter: drop-shadow(0 0 6px rgba(var(--sl-color-accent), 0.15));
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--sl-color-accent) 15%, transparent));
     transition:
         filter 0.25s ease,
         background-color 0.25s ease,
@@ -150,8 +150,8 @@ article.card .icon {
 }
 
 article.card:hover .icon {
-    filter: drop-shadow(0 0 10px rgba(var(--sl-color-accent), 0.25));
-    background-color: rgba(var(--sl-color-accent), 0.25) !important;
+    filter: drop-shadow(0 0 10px color-mix(in srgb, var(--sl-color-accent) 25%, transparent));
+    background-color: color-mix(in srgb, var(--sl-color-accent) 25%, transparent) !important;
     transform: scale(1.05);
 }
 
@@ -228,7 +228,7 @@ article.card:hover .icon {
 /* LinkCard arrow icon */
 .sl-link-card .icon {
     color: var(--sl-color-accent);
-    filter: drop-shadow(0 0 8px rgba(var(--sl-color-accent), 0.3));
+    filter: drop-shadow(0 0 8px color-mix(in srgb, var(--sl-color-accent) 30%, transparent));
     flex-shrink: 0;
     transition: var(--galaxy-transform-transition);
 }
@@ -236,7 +236,7 @@ article.card:hover .icon {
 /* LinkCard hover effects - refined */
 .sl-link-card:hover {
     transform: translateY(-2px);
-    border-color: rgba(var(--sl-color-accent), 0.2);
+    border-color: color-mix(in srgb, var(--sl-color-accent) 20%, transparent);
     box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.1),
         0 4px 12px rgba(0, 0, 0, 0.06),
@@ -246,12 +246,12 @@ article.card:hover .icon {
 .sl-link-card:hover::before {
     background: var(--galaxy-accent-highlight-hover);
     height: 2px;
-    box-shadow: 0 0 6px rgba(var(--sl-color-accent), 0.3);
+    box-shadow: 0 0 6px color-mix(in srgb, var(--sl-color-accent) 30%, transparent);
 }
 
 .sl-link-card:hover .icon {
     transform: translateX(3px);
-    filter: drop-shadow(0 0 8px rgba(var(--sl-color-accent), 0.35));
+    filter: drop-shadow(0 0 8px color-mix(in srgb, var(--sl-color-accent) 35%, transparent));
 }
 
 /* Enhanced focus states for accessibility */
@@ -260,7 +260,7 @@ article.card:hover .icon {
     outline: 2px solid var(--sl-color-accent);
     outline-offset: 3px;
     box-shadow:
-        0 0 0 4px rgba(var(--sl-color-accent), 0.2),
+        0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent),
         var(--galaxy-card-shadow);
 }
 
@@ -279,7 +279,7 @@ article.card:hover .icon {
     display: inline;
     color: var(--sl-color-accent);
     text-decoration: underline;
-    text-decoration-color: rgba(var(--sl-color-accent), 0.4);
+    text-decoration-color: color-mix(in srgb, var(--sl-color-accent) 40%, transparent);
     text-underline-offset: 0.15em;
 }
 
@@ -482,7 +482,7 @@ article.card:hover .icon {
     background: var(--galaxy-button-primary-gradient);
     color: var(--sl-color-black);
     box-shadow: var(--galaxy-button-shadow-primary);
-    border-color: rgba(var(--sl-color-accent), 0.3);
+    border-color: color-mix(in srgb, var(--sl-color-accent) 30%, transparent);
     padding: 1rem 1.5rem;
   }
   
@@ -585,7 +585,7 @@ article.card:hover .icon {
   /* Hover effects for minimal */
   .sl-link-button.minimal:hover {
     color: var(--sl-color-accent-high);
-    background: rgba(var(--sl-color-accent), 0.1);
+    background: color-mix(in srgb, var(--sl-color-accent) 10%, transparent);
   }
 
   .sl-link-button.minimal:hover svg {
@@ -600,13 +600,13 @@ article.card:hover .icon {
   
   .sl-link-button.primary:focus {
     box-shadow: 
-      0 0 0 4px rgba(var(--sl-color-accent), 0.3),
+      0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 30%, transparent),
       var(--galaxy-button-shadow-primary-hover);
   }
   
   .sl-link-button.secondary:focus {
     box-shadow: 
-      0 0 0 4px rgba(var(--sl-color-accent), 0.2),
+      0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent),
       var(--galaxy-button-shadow-secondary-hover);
   }
   
@@ -637,8 +637,8 @@ article.card:hover .icon {
     background: var(--galaxy-button-primary-gradient);
     color: var(--sl-color-black);
     box-shadow: 
-      0 4px 16px rgba(var(--sl-color-accent), 0.2),
-      0 2px 8px rgba(var(--sl-color-accent), 0.1),
+      0 4px 16px color-mix(in srgb, var(--sl-color-accent) 20%, transparent),
+      0 2px 8px color-mix(in srgb, var(--sl-color-accent) 10%, transparent),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
   

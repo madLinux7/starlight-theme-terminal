@@ -65,6 +65,13 @@ import HeaderButton from '../components/HeaderButton.astro';
     place-items: center;
   }
 
+  /* Hide duplicate toggle in mobile menu footer */
+  @media (max-width: 50rem) {
+    :global(.mobile-preferences) theme-toggle {
+      display: none;
+    }
+  }
+
   svg {
     stroke-linecap: round;
 
@@ -147,3 +154,4 @@ import HeaderButton from '../components/HeaderButton.astro';
     }
   }
   </style>
+</theme-toggle>

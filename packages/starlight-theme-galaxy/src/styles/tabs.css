@@ -23,7 +23,7 @@
   --galaxy-tab-gap: 0.5rem;
   
   /* Tab colors */
-  --galaxy-tab-text: var(--sl-color-gray-3);
+  --galaxy-tab-text: var(--sl-color-gray-4);
   --galaxy-tab-text-active: var(--sl-color-accent-high);
   --galaxy-tab-text-hover: var(--sl-color-gray-1);
   --galaxy-tab-bg-hover: var(--sl-color-gray-6);
@@ -78,7 +78,7 @@ starlight-tabs::before {
 .tablist-wrapper {
   position: relative;
   background: var(--galaxy-tablist-bg);
-  border-bottom: var(--galaxy-tablist-border);
+  border-bottom: none;
   padding: 0.25rem;
   
   /* Tab list */
@@ -89,14 +89,32 @@ starlight-tabs::before {
     list-style: none;
     gap: 0.125rem;
     background: transparent;
+    border-bottom: 1px solid var(--sl-color-gray-5);
   }
 
   /* Individual tab styling */
   & li.tab {
     position: relative;
-    flex: 1;
     margin: 0;
-    
+
+    /* Active indicator (rounded pill centered on separator line) */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0.5rem;
+      right: 0.5rem;
+      height: 3px;
+      border-radius: 3px;
+      background: transparent;
+      transition: background 0.2s ease;
+      z-index: 1;
+    }
+
+    &:has(a[aria-selected="true"])::after {
+      background: var(--galaxy-tab-border-active);
+    }
+
     /* Tab button/link */
     & a[role="tab"] {
       position: relative;
@@ -111,7 +129,6 @@ starlight-tabs::before {
       color: var(--galaxy-tab-text);
       background: transparent;
       border: none;
-      border-bottom: 2px solid transparent;
       border-radius: var(--galaxy-tab-radius);
       text-decoration: none;
       transition: var(--galaxy-tab-transition);
@@ -120,7 +137,7 @@ starlight-tabs::before {
       overflow: hidden;
       text-overflow: ellipsis;
       outline: none !important;
-      margin-bottom: -2px;
+      box-shadow: none;
       
       /* Icon styling within tabs */
       & svg {
@@ -133,11 +150,10 @@ starlight-tabs::before {
       
       /* Active tab styling */
       &[aria-selected="true"] {
-        background: var(--galaxy-tab-bg-hover);
+        background: transparent;
         color: var(--galaxy-tab-text-active);
-        font-weight: 700;
-        border-bottom-color: var(--galaxy-tab-border-active);
-        
+        font-weight: 600;
+
         /* Active tab icon styling */
         & svg {
           color: var(--galaxy-tab-icon-active);
@@ -237,7 +253,7 @@ starlight-tabs > *:not(.tablist-wrapper) > div {
 
 :root[data-theme='light'] .tablist-wrapper {
   background: var(--galaxy-tablist-bg);
-  border-bottom: var(--galaxy-tablist-border);
+  border-bottom: none;
   
   & li.tab a[role="tab"]:not([aria-selected="true"]):hover {
     background: var(--galaxy-tab-bg-hover);

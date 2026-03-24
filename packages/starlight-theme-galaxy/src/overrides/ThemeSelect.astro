@@ -1,5 +1,4 @@
 ---
-import { Icon } from "@astrojs/starlight/components";
 import HeaderButton from '../components/HeaderButton.astro';
 ---
 <theme-toggle>
@@ -34,6 +33,7 @@ import HeaderButton from '../components/HeaderButton.astro';
         (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
       document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
       this.handleMouseDown = this.handleMouseDown.bind(this);
+      this.updateMaskPosition(theme);
     }
     connectedCallback() {
       this.addEventListener('click', this.handleMouseDown);
@@ -41,10 +41,17 @@ import HeaderButton from '../components/HeaderButton.astro';
     disconnectedCallback() {
       this.removeEventListener('click', this.handleMouseDown);
     }
+    private updateMaskPosition(theme: string) {
+      const maskCircle = this.querySelector('#moon-mask circle:last-child');
+      if (maskCircle) {
+        maskCircle.setAttribute('cx', theme === 'dark' ? '17' : '24');
+      }
+    }
     private handleMouseDown() {
       const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       document.documentElement.dataset.theme = theme;
       localStorage.setItem('starlight-theme', theme);
+      this.updateMaskPosition(theme);
     }
   }
   customElements.define('theme-toggle', ThemeSwitcher);

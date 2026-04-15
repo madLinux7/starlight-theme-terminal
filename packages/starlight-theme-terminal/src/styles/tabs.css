@@ -2,50 +2,50 @@
  * Tab component styling  
  * ============================ */
 
-/* Galaxy Tab Design Tokens */
+/* Terminal Tab Design Tokens */
 :root {
   /* Tab container styling */
-  --galaxy-tabs-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-  --galaxy-tabs-border: 1px solid rgba(255, 255, 255, 0.12);
-  --galaxy-tabs-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  --galaxy-tabs-radius: 0.5rem;
-  --galaxy-tabs-blur: blur(16px);
+  --terminal-tabs-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  --terminal-tabs-border: 1px solid rgba(255, 255, 255, 0.12);
+  --terminal-tabs-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --terminal-tabs-radius: 0.5rem;
+  --terminal-tabs-blur: blur(16px);
   
   /* Tab list wrapper */
-  --galaxy-tablist-bg: rgba(255, 255, 255, 0.05);
-  --galaxy-tablist-border: 1px solid rgba(255, 255, 255, 0.1);
+  --terminal-tablist-bg: rgba(255, 255, 255, 0.05);
+  --terminal-tablist-border: 1px solid rgba(255, 255, 255, 0.1);
   
   /* Tab item styling */
-  --galaxy-tab-padding: 0.625rem 1rem;
-  --galaxy-tab-font-size: 0.875rem;
-  --galaxy-tab-radius: 0.25rem 0.25rem 0 0;
-  --galaxy-tab-transition: all 0.2s ease;
-  --galaxy-tab-gap: 0.5rem;
+  --terminal-tab-padding: 0.625rem 1rem;
+  --terminal-tab-font-size: 0.875rem;
+  --terminal-tab-radius: 0.25rem 0.25rem 0 0;
+  --terminal-tab-transition: all 0.2s ease;
+  --terminal-tab-gap: 0.5rem;
   
   /* Tab colors */
-  --galaxy-tab-text: var(--sl-color-gray-4);
-  --galaxy-tab-text-active: var(--sl-color-accent-high);
-  --galaxy-tab-text-hover: var(--sl-color-gray-1);
-  --galaxy-tab-bg-hover: var(--sl-color-gray-6);
-  --galaxy-tab-border-active: var(--sl-color-accent);
-  --galaxy-tab-icon: var(--sl-color-gray-3);
-  --galaxy-tab-icon-active: var(--sl-color-accent);
+  --terminal-tab-text: var(--sl-color-gray-4);
+  --terminal-tab-text-active: var(--sl-color-accent-high);
+  --terminal-tab-text-hover: var(--sl-color-gray-1);
+  --terminal-tab-bg-hover: var(--sl-color-gray-6);
+  --terminal-tab-border-active: var(--sl-color-accent);
+  --terminal-tab-icon: var(--sl-color-gray-3);
+  --terminal-tab-icon-active: var(--sl-color-accent);
   
   /* Focus states */
-  --galaxy-tab-focus-shadow: 0 0 0 2px var(--sl-color-accent);
+  --terminal-tab-focus-shadow: 0 0 0 2px var(--sl-color-accent);
   
   /* Accent line */
-  --galaxy-tabs-accent-line: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 30%, transparent), transparent);
+  --terminal-tabs-accent-line: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 30%, transparent), transparent);
 }
 
 /* Light theme overrides */
 :root[data-theme='light'] {
-  --galaxy-tabs-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
-  --galaxy-tabs-border: 1px solid rgba(0, 0, 0, 0.08);
-  --galaxy-tabs-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  --galaxy-tablist-bg: rgba(0, 0, 0, 0.02);
-  --galaxy-tablist-border: 1px solid rgba(0, 0, 0, 0.08);
-  --galaxy-tab-bg-hover: rgba(0, 0, 0, 0.05);
+  --terminal-tabs-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  --terminal-tabs-border: 1px solid rgba(0, 0, 0, 0.08);
+  --terminal-tabs-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --terminal-tablist-bg: rgba(0, 0, 0, 0.02);
+  --terminal-tablist-border: 1px solid rgba(0, 0, 0, 0.08);
+  --terminal-tab-bg-hover: rgba(0, 0, 0, 0.05);
 }
 
 /* Tab container with card styling */
@@ -53,13 +53,13 @@ starlight-tabs {
   position: relative;
   display: block;
   margin: 1.5rem 0 2rem 0;
-  border-radius: var(--galaxy-tabs-radius);
+  border-radius: var(--terminal-tabs-radius);
   overflow: hidden;
-  background: var(--galaxy-tabs-bg);
-  backdrop-filter: var(--galaxy-tabs-blur);
-  -webkit-backdrop-filter: var(--galaxy-tabs-blur);
-  border: var(--galaxy-tabs-border);
-  box-shadow: var(--galaxy-tabs-shadow);
+  background: var(--terminal-tabs-bg);
+  backdrop-filter: var(--terminal-tabs-blur);
+  -webkit-backdrop-filter: var(--terminal-tabs-blur);
+  border: var(--terminal-tabs-border);
+  box-shadow: var(--terminal-tabs-shadow);
 }
 
 /* Subtle top accent line */
@@ -70,14 +70,14 @@ starlight-tabs::before {
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--galaxy-tabs-accent-line);
-  border-radius: var(--galaxy-tabs-radius) var(--galaxy-tabs-radius) 0 0;
+  background: var(--terminal-tabs-accent-line);
+  border-radius: var(--terminal-tabs-radius) var(--terminal-tabs-radius) 0 0;
 }
 
 /* Tab list container */
 .tablist-wrapper {
   position: relative;
-  background: var(--galaxy-tablist-bg);
+  background: var(--terminal-tablist-bg);
   border-bottom: none;
   padding: 0.25rem;
   
@@ -112,7 +112,7 @@ starlight-tabs::before {
     }
 
     &:has(a[aria-selected="true"])::after {
-      background: var(--galaxy-tab-border-active);
+      background: var(--terminal-tab-border-active);
     }
 
     /* Tab button/link */
@@ -121,17 +121,17 @@ starlight-tabs::before {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: var(--galaxy-tab-gap);
-      padding: var(--galaxy-tab-padding);
-      font-size: var(--galaxy-tab-font-size);
+      gap: var(--terminal-tab-gap);
+      padding: var(--terminal-tab-padding);
+      font-size: var(--terminal-tab-font-size);
       font-weight: 500;
       line-height: 1.2;
-      color: var(--galaxy-tab-text);
+      color: var(--terminal-tab-text);
       background: transparent;
       border: none;
-      border-radius: var(--galaxy-tab-radius);
+      border-radius: var(--terminal-tab-radius);
       text-decoration: none;
-      transition: var(--galaxy-tab-transition);
+      transition: var(--terminal-tab-transition);
       cursor: pointer;
       white-space: nowrap;
       overflow: hidden;
@@ -144,29 +144,29 @@ starlight-tabs::before {
         width: 1rem;
         height: 1rem;
         flex-shrink: 0;
-        color: var(--galaxy-tab-icon);
+        color: var(--terminal-tab-icon);
         transition: color 0.2s ease;
       }
       
       /* Active tab styling */
       &[aria-selected="true"] {
         background: transparent;
-        color: var(--galaxy-tab-text-active);
+        color: var(--terminal-tab-text-active);
         font-weight: 600;
 
         /* Active tab icon styling */
         & svg {
-          color: var(--galaxy-tab-icon-active);
+          color: var(--terminal-tab-icon-active);
         }
       }
       
       /* Inactive tab hover effects */
       &:not([aria-selected="true"]):hover {
-        background: var(--galaxy-tab-bg-hover);
-        color: var(--galaxy-tab-text-hover);
+        background: var(--terminal-tab-bg-hover);
+        color: var(--terminal-tab-text-hover);
         
         & svg {
-          color: var(--galaxy-tab-icon-active);
+          color: var(--terminal-tab-icon-active);
         }
       }
       
@@ -174,7 +174,7 @@ starlight-tabs::before {
       &:focus,
       &:focus-visible {
         outline: none !important;
-        box-shadow: var(--galaxy-tab-focus-shadow);
+        box-shadow: var(--terminal-tab-focus-shadow);
       }
       
       /* Remove any webkit focus ring */
@@ -188,10 +188,10 @@ starlight-tabs::before {
 
 /* Tab panel content */
 starlight-tabs > *:not(.tablist-wrapper) {
-  padding: 0.4rem;
+  padding: .6rem .6rem .4rem .6rem;
   margin: 0;
   width: 100%;
-  border-radius: 0 0 var(--galaxy-tabs-radius) var(--galaxy-tabs-radius);
+  border-radius: 0 0 var(--terminal-tabs-radius) var(--terminal-tabs-radius);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -199,13 +199,21 @@ starlight-tabs > *:not(.tablist-wrapper) {
 /* Force expressive-code blocks to fill tabs horizontally */
 starlight-tabs > *:not(.tablist-wrapper) .expressive-code {
   margin: -0.25rem !important;
-  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  /* margin-top: 0 !important; */
+  /* margin-left: 4px !important; */
+  /* margin-right: 4px !important; */
+  /* margin-left: 0px !important; */
   padding: 0 !important;
   width: calc(100% + 0.5rem) !important;
   max-width: none !important;
-  border-radius: 0 0 var(--galaxy-tabs-radius) var(--galaxy-tabs-radius) !important;
+  border-radius: 0 0 var(--terminal-tabs-radius) var(--terminal-tabs-radius) !important;
   border: none !important;
   display: block !important;
+}
+
+starlight-tabs > *:not(.tablist-wrapper) .expressive-code:last-child {
+  margin-bottom: 0px !important;
 }
 
 starlight-tabs > *:not(.tablist-wrapper) .expressive-code figure {
@@ -219,7 +227,7 @@ starlight-tabs > *:not(.tablist-wrapper) .expressive-code pre {
   margin: 0 !important;
   width: 100% !important;
   max-width: none !important;
-  border-radius: 0 0 var(--galaxy-tabs-radius) var(--galaxy-tabs-radius) !important;
+  border-radius: 0 0 var(--terminal-tabs-radius) var(--terminal-tabs-radius) !important;
   box-sizing: border-box !important;
 }
 
@@ -232,8 +240,8 @@ starlight-tabs > *:not(.tablist-wrapper) > div {
 /* Responsive design */
 @media (max-width: 50rem) {
   :root {
-    --galaxy-tab-padding: 0.5rem 0.75rem;
-    --galaxy-tab-font-size: 0.8rem;
+    --terminal-tab-padding: 0.5rem 0.75rem;
+    --terminal-tab-font-size: 0.8rem;
   }
   
   starlight-tabs > *:not(.tablist-wrapper) {
@@ -246,24 +254,24 @@ starlight-tabs > *:not(.tablist-wrapper) > div {
 
 /* Light theme component overrides (using variables defined above) */
 :root[data-theme='light'] starlight-tabs {
-  background: var(--galaxy-tabs-bg);
-  border: var(--galaxy-tabs-border);
-  box-shadow: var(--galaxy-tabs-shadow);
+  background: var(--terminal-tabs-bg);
+  border: var(--terminal-tabs-border);
+  box-shadow: var(--terminal-tabs-shadow);
 }
 
 :root[data-theme='light'] .tablist-wrapper {
-  background: var(--galaxy-tablist-bg);
+  background: var(--terminal-tablist-bg);
   border-bottom: none;
   
   & li.tab a[role="tab"]:not([aria-selected="true"]):hover {
-    background: var(--galaxy-tab-bg-hover);
+    background: var(--terminal-tab-bg-hover);
   }
 }
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   :root {
-    --galaxy-tab-transition: none;
+    --terminal-tab-transition: none;
   }
   
   .tablist-wrapper {
@@ -271,4 +279,9 @@ starlight-tabs > *:not(.tablist-wrapper) > div {
       transition: none;
     }
   }
+}
+
+/* ---------- Zero-pad after content in tabs ---------- */
+starlight-tabs-restore {
+  padding: 0 !important;
 }

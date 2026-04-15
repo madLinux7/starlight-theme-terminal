@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     name: Release
-    if: ${{ github.repository_owner == 'frostybee' }}
+    if: ${{ github.repository_owner == 'madLinux7' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

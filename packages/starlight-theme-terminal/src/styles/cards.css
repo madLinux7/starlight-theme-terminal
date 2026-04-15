@@ -5,65 +5,65 @@
 /* CSS Custom Properties for Cards */
 :root {
   /* Glass morphism effects */
-  --galaxy-card-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-  --galaxy-card-glass-bg-light: linear-gradient(135deg, rgba(0, 0, 0, 0.025) 0%, rgba(0, 0, 0, 0.015) 100%);
-  --galaxy-card-backdrop-filter: blur(16px);
-  --galaxy-card-border: 1px solid rgba(255, 255, 255, 0.12);
-  --galaxy-card-border-light: 1px solid rgba(0, 0, 0, 0.08);
+  --terminal-card-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  --terminal-card-glass-bg-light: linear-gradient(135deg, rgba(0, 0, 0, 0.025) 0%, rgba(0, 0, 0, 0.015) 100%);
+  --terminal-card-backdrop-filter: blur(16px);
+  --terminal-card-border: 1px solid rgba(255, 255, 255, 0.12);
+  --terminal-card-border-light: 1px solid rgba(0, 0, 0, 0.08);
   
   /* Border radius */
-  --galaxy-card-border-radius: 1rem;
-  --galaxy-button-border-radius: 0.75rem;
+  --terminal-card-border-radius: 1rem;
+  --terminal-button-border-radius: 0.75rem;
   
   /* Box shadows */
-  --galaxy-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  --galaxy-card-shadow-light: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  --galaxy-card-shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  --galaxy-card-shadow-hover-light: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  --galaxy-card-shadow-focus: 0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent), 0 24px 64px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(0, 0, 0, 0.12);
+  --terminal-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --terminal-card-shadow-light: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --terminal-card-shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  --terminal-card-shadow-hover-light: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --terminal-card-shadow-focus: 0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent), 0 24px 64px rgba(0, 0, 0, 0.18), 0 8px 24px rgba(0, 0, 0, 0.12);
   
   /* Button shadows */
-  --galaxy-button-shadow-primary: 0 4px 16px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), 0 2px 8px color-mix(in srgb, var(--sl-color-accent) 15%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  --galaxy-button-shadow-primary-hover: 0 8px 32px color-mix(in srgb, var(--sl-color-accent) 40%, transparent), 0 4px 16px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  --galaxy-button-shadow-secondary: 0 2px 8px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  --galaxy-button-shadow-secondary-hover: 0 6px 24px rgba(0, 0, 0, 0.15), 0 2px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  --terminal-button-shadow-primary: 0 4px 16px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), 0 2px 8px color-mix(in srgb, var(--sl-color-accent) 15%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --terminal-button-shadow-primary-hover: 0 8px 32px color-mix(in srgb, var(--sl-color-accent) 40%, transparent), 0 4px 16px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --terminal-button-shadow-secondary: 0 2px 8px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --terminal-button-shadow-secondary-hover: 0 6px 24px rgba(0, 0, 0, 0.15), 0 2px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   
   /* Transitions */
-  --galaxy-card-transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-  --galaxy-card-transition-fast: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  --galaxy-icon-transition: all 0.3s ease;
-  --galaxy-transform-transition: transform 0.3s ease;
+  --terminal-card-transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  --terminal-card-transition-fast: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  --terminal-icon-transition: all 0.3s ease;
+  --terminal-transform-transition: transform 0.3s ease;
   
   /* Transforms */
-  --galaxy-card-hover-transform: translateY(-4px) translateZ(0);
-  --galaxy-button-hover-transform: translateY(-2px);
+  --terminal-card-hover-transform: translateY(-4px) translateZ(0);
+  --terminal-button-hover-transform: translateY(-2px);
   
   /* Gradients */
-  --galaxy-title-gradient: linear-gradient(135deg, var(--sl-color-white), var(--sl-color-accent-high));
-  --galaxy-accent-highlight: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 30%, transparent), transparent);
-  --galaxy-accent-highlight-hover: linear-gradient(90deg, transparent, var(--sl-color-accent), transparent);
-  --galaxy-button-primary-gradient: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent-high) 100%);
-  --galaxy-button-primary-gradient-hover: linear-gradient(135deg, var(--sl-color-accent-high) 0%, var(--sl-color-accent) 100%);
-  --galaxy-button-secondary-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-  --galaxy-button-secondary-gradient-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  --terminal-title-gradient: linear-gradient(135deg, var(--sl-color-white), var(--sl-color-accent-high));
+  --terminal-accent-highlight: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sl-color-accent) 30%, transparent), transparent);
+  --terminal-accent-highlight-hover: linear-gradient(90deg, transparent, var(--sl-color-accent), transparent);
+  --terminal-button-primary-gradient: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent-high) 100%);
+  --terminal-button-primary-gradient-hover: linear-gradient(135deg, var(--sl-color-accent-high) 0%, var(--sl-color-accent) 100%);
+  --terminal-button-secondary-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  --terminal-button-secondary-gradient-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
   
   /* Light theme button styles */
-  --galaxy-button-secondary-gradient-light: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
-  --galaxy-button-secondary-gradient-light-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
-  --galaxy-button-shadow-secondary-light: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  --galaxy-button-shadow-secondary-light-hover: 0 6px 24px rgba(0, 0, 0, 0.1), 0 2px 12px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --terminal-button-secondary-gradient-light: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  --terminal-button-secondary-gradient-light-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+  --terminal-button-shadow-secondary-light: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --terminal-button-shadow-secondary-light-hover: 0 6px 24px rgba(0, 0, 0, 0.1), 0 2px 12px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 /* Card component styling */
 .card {
     position: relative;
     overflow: hidden;
-    background: var(--galaxy-card-glass-bg);
-    backdrop-filter: var(--galaxy-card-backdrop-filter);
-    -webkit-backdrop-filter: var(--galaxy-card-backdrop-filter);
-    border: var(--galaxy-card-border);
-    border-radius: var(--galaxy-card-border-radius);
-    box-shadow: var(--galaxy-card-shadow);
+    background: var(--terminal-card-glass-bg);
+    backdrop-filter: var(--terminal-card-backdrop-filter);
+    -webkit-backdrop-filter: var(--terminal-card-backdrop-filter);
+    border: var(--terminal-card-border);
+    border-radius: var(--terminal-card-border-radius);
+    box-shadow: var(--terminal-card-shadow);
     transition:
         transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
@@ -94,8 +94,8 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--galaxy-accent-highlight);
-    border-radius: var(--galaxy-card-border-radius) var(--galaxy-card-border-radius) 0 0;
+    background: var(--terminal-accent-highlight);
+    border-radius: var(--terminal-card-border-radius) var(--terminal-card-border-radius) 0 0;
 }
 
 
@@ -104,7 +104,7 @@
 .card:focus-within {
     outline: 2px solid var(--sl-color-accent);
     outline-offset: 3px;
-    box-shadow: var(--galaxy-card-shadow-focus);
+    box-shadow: var(--terminal-card-shadow-focus);
 }
 
 /* Card title styling */
@@ -121,7 +121,7 @@
 .card .title {
     font-weight: 600;
     font-size: 1.1rem;
-    background: var(--galaxy-title-gradient);
+    background: var(--terminal-title-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -173,14 +173,14 @@ article.card:hover .icon {
 .sl-link-card {
     position: relative;
     overflow: hidden;
-    background: var(--galaxy-card-glass-bg);
-    backdrop-filter: var(--galaxy-card-backdrop-filter);
-    -webkit-backdrop-filter: var(--galaxy-card-backdrop-filter);
-    border: var(--galaxy-card-border);
-    border-radius: var(--galaxy-card-border-radius);
-    box-shadow: var(--galaxy-card-shadow);
+    background: var(--terminal-card-glass-bg);
+    backdrop-filter: var(--terminal-card-backdrop-filter);
+    -webkit-backdrop-filter: var(--terminal-card-backdrop-filter);
+    border: var(--terminal-card-border);
+    border-radius: var(--terminal-card-border-radius);
+    box-shadow: var(--terminal-card-shadow);
     padding: 1.2rem;
-    transition: var(--galaxy-card-transition-fast);
+    transition: var(--terminal-card-transition-fast);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -195,8 +195,8 @@ article.card:hover .icon {
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--galaxy-accent-highlight);
-    border-radius: var(--galaxy-card-border-radius) var(--galaxy-card-border-radius) 0 0;
+    background: var(--terminal-accent-highlight);
+    border-radius: var(--terminal-card-border-radius) var(--terminal-card-border-radius) 0 0;
 }
 
 /* LinkCard content area */
@@ -209,7 +209,7 @@ article.card:hover .icon {
 .sl-link-card .title {
     font-weight: 600;
     font-size: 1.1rem;
-    background: var(--galaxy-title-gradient);
+    background: var(--terminal-title-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -230,7 +230,7 @@ article.card:hover .icon {
     color: var(--sl-color-accent);
     filter: drop-shadow(0 0 8px color-mix(in srgb, var(--sl-color-accent) 30%, transparent));
     flex-shrink: 0;
-    transition: var(--galaxy-transform-transition);
+    transition: var(--terminal-transform-transition);
 }
 
 /* LinkCard hover effects - refined */
@@ -244,7 +244,7 @@ article.card:hover .icon {
 }
 
 .sl-link-card:hover::before {
-    background: var(--galaxy-accent-highlight-hover);
+    background: var(--terminal-accent-highlight-hover);
     height: 2px;
     box-shadow: 0 0 6px color-mix(in srgb, var(--sl-color-accent) 30%, transparent);
 }
@@ -261,7 +261,7 @@ article.card:hover .icon {
     outline-offset: 3px;
     box-shadow:
         0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent),
-        var(--galaxy-card-shadow);
+        var(--terminal-card-shadow);
 }
 
 /* LinkCard specific styles for regular cards */
@@ -270,7 +270,7 @@ article.card:hover .icon {
     text-decoration: none;
     color: inherit;
     height: 100%;
-    transition: var(--galaxy-icon-transition);
+    transition: var(--terminal-icon-transition);
 }
 
 /* Links inside card body content should be visible */
@@ -364,9 +364,9 @@ article.card:hover .icon {
 
 /* Light theme adjustments */
 :root[data-theme='light'] .card {
-    background: var(--galaxy-card-glass-bg-light);
-    border: var(--galaxy-card-border-light);
-    box-shadow: var(--galaxy-card-shadow-light);
+    background: var(--terminal-card-glass-bg-light);
+    border: var(--terminal-card-border-light);
+    box-shadow: var(--terminal-card-shadow-light);
     color: var(--sl-color-gray-3);
 }
 
@@ -385,15 +385,15 @@ article.card:hover .icon {
 
 /* Light theme LinkCard adjustments */
 :root[data-theme='light'] .sl-link-card {
-    background: var(--galaxy-card-glass-bg-light);
-    border: var(--galaxy-card-border-light);
-    box-shadow: var(--galaxy-card-shadow-light);
+    background: var(--terminal-card-glass-bg-light);
+    border: var(--terminal-card-border-light);
+    box-shadow: var(--terminal-card-shadow-light);
 }
 
 
 /* Light theme LinkCard hover effects */
 :root[data-theme='light'] .sl-link-card:hover {
-    box-shadow: var(--galaxy-card-shadow-hover-light);
+    box-shadow: var(--terminal-card-shadow-hover-light);
 }
 
 /* High contrast mode support */
@@ -467,8 +467,8 @@ article.card:hover .icon {
     font-size: 0.875rem;
     line-height: 1;
     text-decoration: none;
-    border-radius: var(--galaxy-button-border-radius);
-    transition: var(--galaxy-card-transition-fast);
+    border-radius: var(--terminal-button-border-radius);
+    transition: var(--terminal-card-transition-fast);
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -479,9 +479,9 @@ article.card:hover .icon {
   
   /* Primary button variant */
   .sl-link-button.primary {
-    background: var(--galaxy-button-primary-gradient);
+    background: var(--terminal-button-primary-gradient);
     color: var(--sl-color-black);
-    box-shadow: var(--galaxy-button-shadow-primary);
+    box-shadow: var(--terminal-button-shadow-primary);
     border-color: color-mix(in srgb, var(--sl-color-accent) 30%, transparent);
     padding: 1rem 1.5rem;
   }
@@ -497,15 +497,15 @@ article.card:hover .icon {
       transparent, 
       rgba(255, 255, 255, 0.4), 
       transparent);
-    border-radius: var(--galaxy-button-border-radius) var(--galaxy-button-border-radius) 0 0;
+    border-radius: var(--terminal-button-border-radius) var(--terminal-button-border-radius) 0 0;
   }
   
   /* Secondary button variant */
   .sl-link-button.secondary {
-    background: var(--galaxy-button-secondary-gradient);
+    background: var(--terminal-button-secondary-gradient);
     color: var(--sl-color-gray-1);
     border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: var(--galaxy-button-shadow-secondary);
+    box-shadow: var(--terminal-button-shadow-secondary);
     padding: 1rem 1.5rem;
   }
   
@@ -520,7 +520,7 @@ article.card:hover .icon {
       transparent, 
       rgba(255, 255, 255, 0.3), 
       transparent);
-    border-radius: var(--galaxy-button-border-radius) var(--galaxy-button-border-radius) 0 0;
+    border-radius: var(--terminal-button-border-radius) var(--terminal-button-border-radius) 0 0;
   }
   
   /* Minimal button variant */
@@ -539,14 +539,14 @@ article.card:hover .icon {
     width: 1rem;
     height: 1rem;
     flex-shrink: 0;
-    transition: var(--galaxy-transform-transition);
+    transition: var(--terminal-transform-transition);
   }
 
   /* Hover effects for primary */
   .sl-link-button.primary:hover {
-    transform: var(--galaxy-button-hover-transform);
-    box-shadow: var(--galaxy-button-shadow-primary-hover);
-    background: var(--galaxy-button-primary-gradient-hover);
+    transform: var(--terminal-button-hover-transform);
+    box-shadow: var(--terminal-button-shadow-primary-hover);
+    background: var(--terminal-button-primary-gradient-hover);
   }
 
   .sl-link-button.primary:hover::before {
@@ -563,9 +563,9 @@ article.card:hover .icon {
 
   /* Hover effects for secondary */
   .sl-link-button.secondary:hover {
-    transform: var(--galaxy-button-hover-transform);
-    box-shadow: var(--galaxy-button-shadow-secondary-hover);
-    background: var(--galaxy-button-secondary-gradient-hover);
+    transform: var(--terminal-button-hover-transform);
+    box-shadow: var(--terminal-button-shadow-secondary-hover);
+    background: var(--terminal-button-secondary-gradient-hover);
     border-color: rgba(255, 255, 255, 0.3);
     color: var(--sl-color-white);
   }
@@ -601,13 +601,13 @@ article.card:hover .icon {
   .sl-link-button.primary:focus {
     box-shadow: 
       0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 30%, transparent),
-      var(--galaxy-button-shadow-primary-hover);
+      var(--terminal-button-shadow-primary-hover);
   }
   
   .sl-link-button.secondary:focus {
     box-shadow: 
       0 0 0 4px color-mix(in srgb, var(--sl-color-accent) 20%, transparent),
-      var(--galaxy-button-shadow-secondary-hover);
+      var(--terminal-button-shadow-secondary-hover);
   }
   
   /* Responsive sizing */
@@ -634,7 +634,7 @@ article.card:hover .icon {
   
   /* Light theme adjustments */
   :root[data-theme='light'] .sl-link-button.primary {
-    background: var(--galaxy-button-primary-gradient);
+    background: var(--terminal-button-primary-gradient);
     color: var(--sl-color-black);
     box-shadow: 
       0 4px 16px color-mix(in srgb, var(--sl-color-accent) 20%, transparent),
@@ -643,16 +643,16 @@ article.card:hover .icon {
   }
   
   :root[data-theme='light'] .sl-link-button.secondary {
-    background: var(--galaxy-button-secondary-gradient-light);
+    background: var(--terminal-button-secondary-gradient-light);
     border-color: rgba(0, 0, 0, 0.1);
     color: var(--sl-color-gray-3);
-    box-shadow: var(--galaxy-button-shadow-secondary-light);
+    box-shadow: var(--terminal-button-shadow-secondary-light);
   }
   
   :root[data-theme='light'] .sl-link-button.secondary:hover {
-    background: var(--galaxy-button-secondary-gradient-light-hover);
+    background: var(--terminal-button-secondary-gradient-light-hover);
     border-color: rgba(0, 0, 0, 0.15);
-    box-shadow: var(--galaxy-button-shadow-secondary-light-hover);
+    box-shadow: var(--terminal-button-shadow-secondary-light-hover);
   }
   
   /* High contrast mode */
@@ -701,3 +701,19 @@ article.card:hover .icon {
     }
   }
 
+
+/* ---------- Icon color (dark) ---------- */
+:root[data-theme='dark'] .card svg {
+	color: var(--brand-primary);
+}
+
+/* ---------- Feature card grid ---------- */
+.card-grid .card {
+	border: 1px solid var(--sl-color-gray-5);
+	transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card-grid .card:hover {
+	border-color: var(--brand-primary);
+	transform: translateY(-2px);
+}

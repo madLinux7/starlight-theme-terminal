@@ -1,5 +1,5 @@
 /* Font Imports */
-@import '@fontsource-variable/inter'; 
+@import '@fontsource-variable/inter';
 @import '@fontsource-variable/jetbrains-mono';
 
 @custom-media --motionSafe (prefers-reduced-motion: no-preference);
@@ -38,6 +38,10 @@ code, pre, kbd, samp {
   /* Base colors */
   --sl-color-white: hsl(0, 0%, 100%);
   --sl-color-black: hsl(224, 10%, 10%);
+
+  /* Brand colors */
+  --brand-primary: #D946EF;
+	--brand-secondary: #7B2FBE;
 
   /* SL's main background and text color  */
   /* --sl-color-text: #c1c3c8; */
@@ -81,7 +85,7 @@ code, pre, kbd, samp {
   /* Component colors */
   --badge-border-color: --sl-color-hairline;
   --fb-blacks: 255, 255, 255;
-  --galaxy-header-bg-color: transparent;
+  --terminal-header-bg-color: transparent;
   --fb-ec-caption-bg-color: #23262e;
   --fb-code-block-bg-color: #272a32;
   --fb-ec-caption-bb-color: #464747;
@@ -143,7 +147,7 @@ code, pre, kbd, samp {
   /* Component colors */
   --badge-border-color: lightgrey;
   --fb-blacks: 0, 0, 0;
-  --galaxy-header-bg-color: rgba(248, 252, 252, 0.95);
+  --terminal-header-bg-color: rgba(248, 252, 252, 0.95);
   --purple-hsl: 255, 85%, 65%;
   --fb-ec-caption-bg-color: #eff2f1;
   --fb-ec-caption-bb-color: #dadde1;
@@ -252,7 +256,7 @@ code, pre, kbd, samp {
 /* Markdown content */
 body {
   /* Disable programming ligatures */
-  font-feature-settings: 'kern' 1, 'liga' 0, 'calt' 0;   
+  font-feature-settings: 'kern' 1, 'liga' 0, 'calt' 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -454,7 +458,7 @@ body {
 
 
 /* ============================
- * Pagination Styling   
+ * Pagination Styling
  * ============================ */
 
 .pagination-links {
@@ -711,12 +715,12 @@ body {
 }
 
 /* ============================
- * Steps styling   
+ * Steps styling
  * ============================ */
 
 
 /* ============================
- * Banner styling     
+ * Banner styling
  * ============================ */
 
 /* Banner container */
@@ -868,7 +872,7 @@ body {
 * Table style overrides
 * ---------------------
 */
-/* Galaxy Table Styling - only visual, no layout changes */
+/* Terminal Table Styling - only visual, no layout changes */
 .sl-markdown-content table {
   line-height: 1.6;
   margin: 1.5rem 0;
@@ -915,7 +919,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--galaxy-accent-highlight);
+  background: var(--terminal-accent-highlight);
 }
 
 /* Cell styling */
@@ -938,7 +942,7 @@ body {
 /* Hover effect for table rows */
 .sl-markdown-content table tbody tr:hover:not(:where(.not-content *)) {
   background: color-mix(in srgb, var(--sl-color-accent) 5%, transparent);
-  transition: var(--galaxy-card-transition-fast);
+  transition: var(--terminal-card-transition-fast);
 }
 
 /* Responsive table */
@@ -984,7 +988,7 @@ body {
 
 
 /* ============================
- * FileTree styling  
+ * FileTree styling
  * ============================ */
 
 /* FileTree component overrides */
@@ -1012,17 +1016,17 @@ starlight-file-tree {
 }
 
 
-/* Galaxy Header Styling */
+/* Terminal Header Styling */
 .header {
   -webkit-backdrop-filter: blur(0.5rem);
   backdrop-filter: blur(0.5rem);
-  background-color: var(--galaxy-header-bg-color);
+  background-color: var(--terminal-header-bg-color);
   min-height: 3rem;
 }
 
 .site-title {
   font-size: var(--sl-text-xl);
-  background: var(--galaxy-title-gradient);
+  background: var(--terminal-title-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1030,8 +1034,8 @@ starlight-file-tree {
 
 /* Light theme adjustments */
 :root[data-theme='light'] .header {
-  background-color: var(--galaxy-header-bg-color);
-  /* border-bottom: var(--galaxy-card-border-light); */
+  background-color: var(--terminal-header-bg-color);
+  /* border-bottom: var(--terminal-card-border-light); */
 }
 
 /* Responsive design */
@@ -1061,4 +1065,54 @@ starlight-file-tree {
 /* Clean step bullets */
 .sl-steps li:before {
   background: var(--sl-color-gray-7);
+}
+
+/* ---------- Fonts ---------- */
+@font-face {
+	font-family: 'Geist';
+	src: url('../fonts/GeistVF.ttf') format('truetype-variations'),
+	     url('../fonts/GeistVF.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geist Mono';
+	src: url('../fonts/GeistMonoVF.ttf') format('truetype-variations'),
+	     url('../fonts/GeistMonoVF.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--sl-font: 'Geist', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+	--sl-font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* ---------- Brand accent ---------- */
+:root,
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #2a0b44;
+	--sl-color-accent: var(--brand-secondary);
+	--sl-color-accent-high: #E9B8F5;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #f3e6ff;
+	--sl-color-accent: var(--brand-secondary);
+	--sl-color-accent-high: #4a1273;
+}
+
+/* ---------- Text selection ---------- */
+::selection {
+	background-color: var(--brand-primary);
+	color: #fff;
+}
+
+/* ---------- Monospace headings ---------- */
+h1 {
+	font-family: "Geist Mono";
+	font-size: 2.77rem;
 }

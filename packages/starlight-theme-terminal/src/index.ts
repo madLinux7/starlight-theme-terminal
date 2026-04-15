@@ -8,8 +8,8 @@ import { join, dirname } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const componentOverrides = {
-  Header: 'starlight-theme-galaxy/overrides/GalaxyHeader.astro',
-  ThemeSelect: 'starlight-theme-galaxy/overrides/ThemeSelect.astro',
+  Header: 'starlight-theme-terminal/overrides/TerminalHeader.astro',
+  ThemeSelect: 'starlight-theme-terminal/overrides/ThemeSelect.astro',
 } as const
 
 function checkComponentOverrides(
@@ -19,11 +19,11 @@ function checkComponentOverrides(
 ): void {
   for (const override of overrides) {
     if (starlightConfig.components?.[override]) {
-      const fallback = `starlight-theme-galaxy/overrides/${override}.astro`
+      const fallback = `starlight-theme-terminal/overrides/${override}.astro`
 
       logger.warn(`A \`<${override}>\` component override is already defined in your Starlight configuration.`)
       logger.warn(
-        `To use \`starlight-theme-galaxy\`, either remove this override or manually render the content from \`${fallback}\`.`,
+        `To use \`starlight-theme-terminal\`, either remove this override or manually render the content from \`${fallback}\`.`,
       )
     }
   }
@@ -32,15 +32,15 @@ function checkComponentOverrides(
 type StarlightUserConfig = HookParameters<'config:setup'>['config']
 type ComponentOverride = keyof typeof componentOverrides
 
-export default function starlightThemeGalaxyPlugin(): StarlightPlugin {
+export default function starlightThemeTerminalPlugin(): StarlightPlugin {
   return {
-    name: 'starlight-theme-galaxy',
+    name: 'starlight-theme-terminal',
     hooks: {
       'config:setup': async ({ config, updateConfig, logger }) => {
         const userExpressiveCodeConfig =
           !config.expressiveCode || config.expressiveCode === true ? {} : config.expressiveCode
         // The path the theme's CSS main file.
-        const galaxyCss = 'starlight-theme-galaxy/styles/index.css';
+        const terminalCss = 'starlight-theme-terminal/styles/index.css';
 
         // Check for existing component overrides and warn if found
         checkComponentOverrides(config, Object.keys(componentOverrides) as ComponentOverride[], logger)
@@ -48,7 +48,7 @@ export default function starlightThemeGalaxyPlugin(): StarlightPlugin {
         updateConfig({
           customCss: [
             // Add our theme's CSS before the consuming project's custom styles.
-            galaxyCss,
+            terminalCss,
             ...(config.customCss ?? []),
           ],
           components: {

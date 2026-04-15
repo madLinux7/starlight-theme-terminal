@@ -1,4 +1,4 @@
-# `starlight-theme-galaxy`
+# `starlight-theme-terminal`
 
 A customized Astro Starlight theme for publishing docs and educational content.
 
@@ -27,6 +27,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## License
 
-Licensed under the MIT License, Copyright © frostybee.
+Licensed under the MIT License, Copyright © madLinux7.
 
 See [LICENSE](/LICENSE) for more information.

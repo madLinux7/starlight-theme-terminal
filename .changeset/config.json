@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",  
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "frostybee/starlight-theme-galaxy" }
+    { "repo": "madLinux7/starlight-theme-terminal" }
   ],
   "commit": false,
   "fixed": [],
@@ -10,5 +10,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["starlight-theme-galaxy-docs"]
+  "ignore": ["starlight-theme-terminal-docs"]
 }

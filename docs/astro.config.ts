@@ -1,14 +1,14 @@
 import starlight from '@astrojs/starlight'
 import { defineConfig } from 'astro/config'
-import starlightThemeGalaxy from 'starlight-theme-galaxy'
+import starlightThemeTerminal from 'starlight-theme-terminal'
 
 
 export default defineConfig({
-  site: 'https://frostybee.github.io/starlight-theme-galaxy',
-  base: '/starlight-theme-galaxy',
+  site: 'https://madLinux7.github.io/starlight-theme-terminal',
+  base: '/starlight-theme-terminal',
   integrations: [
     starlight({
-      title: 'Starlight Galaxy',
+      title: 'Starlight Terminal',
       favicon: '/favicon.svg',
       // defaultLocale: 'en',
       // locales: {
@@ -22,10 +22,10 @@ export default defineConfig({
       //   },
       // },
       editLink: {
-        baseUrl: 'https://github.com/frostybee/starlight-theme-galaxy/edit/main/docs/',
+        baseUrl: 'https://github.com/madLinux7/starlight-theme-terminal/edit/main/docs/',
       },
       tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 4},
-      plugins: [starlightThemeGalaxy()],
+      plugins: [starlightThemeTerminal()],
       sidebar: [
         {
           label: 'Start Here',
@@ -35,7 +35,7 @@ export default defineConfig({
         { label: 'Custom Components', autogenerate: { directory: 'components' } },
       ],  
       social: [
-        { href: 'https://github.com/frostybee/starlight-theme-galaxy', icon: 'github', label: 'GitHub' },
+        { href: 'https://github.com/madLinux7/starlight-theme-terminal', icon: 'github', label: 'GitHub' },
       ],      
     }),
   ],

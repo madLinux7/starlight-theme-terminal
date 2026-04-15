@@ -1,9 +1,9 @@
 {
-  "name": "starlight-theme-galaxy-docs",
+  "name": "starlight-theme-terminal-docs",
   "version": "0.1.3",
   "license": "MIT",
   "description": "A customized Astro Starlight theme for publishing docs and educational content.",
-  "author": "frostybee",
+  "author": "madLinux7",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -17,7 +17,7 @@
     "@astrojs/starlight": "^0.38.2",
     "astro": "^6.0.8",
     "sharp": "^0.34.5",
-    "starlight-theme-galaxy": "workspace:*"
+    "starlight-theme-terminal": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^9.39.4"
@@ -28,18 +28,18 @@
   "keywords": [
     "starlight",
     "theme",
-    "galaxy",
+    "terminal",
     "plugin",
     "documentation",
     "astro"
   ],
   "sideEffects": false,
   "private": true,
-  "homepage": "https://github.com/frostybee/starlight-theme-galaxy",
+  "homepage": "https://github.com/madLinux7/starlight-theme-terminal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/frostybee/starlight-theme-galaxy.git",
+    "url": "https://github.com/madLinux7/starlight-theme-terminal.git",
     "directory": "docs"
   },
-  "bugs": "https://github.com/frostybee/starlight-theme-galaxy/issues"
+  "bugs": "https://github.com/madLinux7/starlight-theme-terminal/issues"
 }

@@ -1,9 +1,9 @@
 {
-  "name": "starlight-theme-galaxy-monorepo",
-  "version": "0.1.0",
+  "name": "starlight-theme-terminal",
+  "version": "0.0.1",
   "license": "MIT",
   "description": "A customized Astro Starlight theme for publishing docs and educational content.",
-  "author": "frostybee",
+  "author": "madLinux7",
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
@@ -11,7 +11,7 @@
   "keywords": [
     "starlight",
     "theme",
-    "galaxy",
+    "terminal",
     "plugin",
     "documentation",
     "astro"
@@ -20,8 +20,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "start:docs": "pnpm -F starlight-theme-galaxy-docs dev",
-    "build:docs": "pnpm -F starlight-theme-galaxy-docs build",
+    "start:docs": "pnpm -F starlight-theme-terminal-docs dev",
+    "build:docs": "pnpm -F starlight-theme-terminal-docs build",
     "lint": "astro check --noSync && pnpm -r lint",
     "ci-version": "changeset version && pnpm install --no-frozen-lockfile",
     "ci-publish": "changeset publish"
@@ -34,10 +34,10 @@
     "astro": "^6.0.8",
     "eslint": "^10.1.0"
   },
-  "homepage": "https://github.com/frostybee/starlight-theme-galaxy",
+  "homepage": "https://github.com/madLinux7/starlight-theme-terminal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/frostybee/starlight-theme-galaxy.git"
+    "url": "https://github.com/madLinux7/starlight-theme-terminal.git"
   },
-  "bugs": "https://github.com/frostybee/starlight-theme-galaxy/issues"
+  "bugs": "https://github.com/madLinux7/starlight-theme-terminal/issues"
 }

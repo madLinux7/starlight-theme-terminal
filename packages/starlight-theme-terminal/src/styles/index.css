@@ -1,0 +1,12 @@
+@layer starlight, terminal;
+
+@import "./terminal-main.css" layer(terminal);
+@import "./asides.css" layer(terminal);
+@import "./toc.css" layer(terminal);
+@import "./sidebar.css" layer(terminal);
+@import "./markdown-lists.css" layer(terminal);
+@import "./expressive-code.css" layer(terminal);
+@import "./tabs.css" layer(terminal);
+@import "./cards.css" layer(terminal);
+@import "./hero.css" layer(terminal);
+@import "./badges.css" layer(terminal);

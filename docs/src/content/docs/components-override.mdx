@@ -2,7 +2,7 @@
 title: Components Override
 ---
 
-The Galaxy theme extends the Starlight [Header](https://starlight.astro.build/reference/overrides/#header-1) component by wrapping it with additional functionality like the progress scroll bar.
+The Terminal theme extends the Starlight [Header](https://starlight.astro.build/reference/overrides/#header-1) component by wrapping it with additional functionality like the progress scroll bar.
 
 ## ⚠️ Component Override Warning
 
@@ -10,20 +10,20 @@ When you override the `Header` component in your project, you may see a warning 
 
 ```text wrap
 A `<Header>` component override is already defined in your Starlight configuration.
-To use `starlight-theme-galaxy`, either remove this override or manually render the content from `starlight-theme-galaxy/overrides/GalaxyHeader.astro`.
+To use `starlight-theme-terminal`, either remove this override or manually render the content from `starlight-theme-terminal/overrides/TerminalHeader.astro`.
 ```
 
-This warning appears because the Galaxy theme automatically overrides the Header component, and Starlight detects a potential conflict. **This is expected behavior** and you can safely ignore the warning or follow one of the customization approaches below to resolve it.
+This warning appears because the Terminal theme automatically overrides the Header component, and Starlight detects a potential conflict. **This is expected behavior** and you can safely ignore the warning or follow one of the customization approaches below to resolve it.
 
 ## Customizing the Header Component
 
-The Galaxy theme uses a clean wrapper approach that extends Starlight's original Header component. If you need to customize the header further, you can create your own wrapper:
+The Terminal theme uses a clean wrapper approach that extends Starlight's original Header component. If you need to customize the header further, you can create your own wrapper:
 
 ```astro
 ---
 // src/components/CustomHeader.astro
 import Header from "@astrojs/starlight/components/Header.astro";
-import ProgressScroll from "starlight-theme-galaxy/components/ProgressScroll.astro";
+import ProgressScroll from "starlight-theme-terminal/components/ProgressScroll.astro";
 
 // Hide progress scroll on the home page only (works with any base URL).
 const baseUrl = import.meta.env.BASE_URL || "/";
@@ -42,7 +42,7 @@ const displayProgressScroll = normalizedPath !== normalizedBase;
 <!-- Original Starlight Header with all props passed through -->
 <Header {...Astro.props} />
 
-<!-- Galaxy theme's progress scroll -->
+<!-- Terminal theme's progress scroll -->
 {displayProgressScroll && <ProgressScroll />}
 
 <!-- Your custom elements after the header -->
@@ -67,21 +67,21 @@ const displayProgressScroll = normalizedPath !== normalizedBase;
 
 ## Available Components
 
-The Galaxy theme exports the following components that you can import and customize:
+The Terminal theme exports the following components that you can import and customize:
 
-- `GalaxyHeader.astro` : The main header wrapper that extends Starlight's Header with progress scroll (located in `src/overrides/`)
-- `ThemeSelect.astro` : Custom theme selector with Galaxy styling
+- `TerminalHeader.astro` : The main header wrapper that extends Starlight's Header with progress scroll (located in `src/overrides/`)
+- `ThemeSelect.astro` : Custom theme selector with Terminal styling
 - `ProgressScroll.astro` : Animated progress bar that shows reading progress
 - `HeaderButton.astro` : Styled button component used in the theme selector
 
 All components can be imported using:
 ```astro
-import ComponentName from 'starlight-theme-galaxy/components/ComponentName.astro'
+import ComponentName from 'starlight-theme-terminal/components/ComponentName.astro'
 ```
 
 For overrides, use:
 ```astro
-import ComponentName from 'starlight-theme-galaxy/overrides/ComponentName.astro'
+import ComponentName from 'starlight-theme-terminal/overrides/ComponentName.astro'
 ```
 
 ## Customization Tips
@@ -89,7 +89,7 @@ import ComponentName from 'starlight-theme-galaxy/overrides/ComponentName.astro'
 1. **Preserve functionality**: When overriding, make sure to pass through the required props.
 2. **Maintain accessibility**: Keep ARIA labels and keyboard navigation intact.
 3. **Responsive design**: Ensure your customizations work on all screen sizes.
-4. **Theme consistency**: Use Galaxy theme's CSS variables for consistent styling.
+4. **Theme consistency**: Use Terminal theme's CSS variables for consistent styling.
 
 For more information about Starlight's component override system, see the [official documentation](https://starlight.astro.build/reference/overrides/).
 

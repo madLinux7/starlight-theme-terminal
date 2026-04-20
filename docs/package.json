@@ -2,7 +2,7 @@
   "name": "starlight-theme-terminal-docs",
   "version": "0.1.3",
   "license": "MIT",
-  "description": "A customized Astro Starlight theme for publishing docs and educational content.",
+  "description": "A customized Astro Starlight theme combining modern and retro elements.",
   "author": "madLinux7",
   "type": "module",
   "scripts": {

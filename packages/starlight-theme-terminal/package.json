@@ -1,8 +1,8 @@
 {
   "name": "starlight-theme-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
-  "description": "Terminal-styled Astro Starlight theme with monospace headers.",
+  "description": "Astro Starlight theme with retro and modern elements.",
   "author": "madLinux7",
   "type": "module",
   "main": "./src/index.ts",

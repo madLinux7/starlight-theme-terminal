@@ -64,11 +64,23 @@
   
   .hero img:hover {
     transform: translateY(-8px) scale(1.02);
-    filter: 
+    filter:
       drop-shadow(0 20px 40px hsla(var(--purple-hsl), 0.4))
       drop-shadow(0 0 60px hsla(var(--purple-hsl), 0.2));
   }
-  
+
+  .hero > img,
+  .hero .hero-html {
+      filter: drop-shadow(0 0 40px rgba(217, 70, 239, 0.25)) !important;
+  }
+
+  :root[data-theme='light'] .hero > img,
+  :root[data-theme='light'] .hero .hero-html {
+    filter:
+      drop-shadow(0 0 24px rgba(123, 47, 190, 1))
+      drop-shadow(0 8px 32px rgba(217, 70, 239, 0.77)) !important;
+  }
+
   /* Professional Typography Hierarchy */
   [data-page-title] {
     font-size: clamp(2.5rem, 5vw, 3.5rem);

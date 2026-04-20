@@ -299,7 +299,7 @@
   
 /* ---------- Monospace h2 on hero pages ---------- */
 html[data-has-hero] h2 {
-	font-family: "Geist Mono";
+	font-family: var(--sl-font-mono);
 }
 
 /* ---------- Hero polish ---------- */

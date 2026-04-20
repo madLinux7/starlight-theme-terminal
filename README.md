@@ -1,1 +1,1 @@
-packages/starlight-theme-galaxy/README.md
+packages/starlight-theme-terminal/README.md

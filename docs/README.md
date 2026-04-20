@@ -1,6 +1,6 @@
 # `starlight-theme-terminal`
 
-A customized Astro Starlight theme for publishing docs and educational content.
+A customized Astro Starlight theme combining modern and retro elements. Made for the **[dssh](https://github.com/madLinux7/dssh) documentation**.
 
 ## Documentation
 
@@ -12,7 +12,7 @@ pnpm run dev
 
 Content can be found in the [`src/content/docs/`](./src/content/docs/) directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 

@@ -4,7 +4,7 @@ import starlightThemeTerminal from 'starlight-theme-terminal'
 
 
 export default defineConfig({
-  site: 'https://madLinux7.github.io/starlight-theme-terminal',
+  site: 'https://madlinux7.github.io/starlight-theme-terminal',
   base: '/starlight-theme-terminal',
   integrations: [
     starlight({

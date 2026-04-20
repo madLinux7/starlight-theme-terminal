@@ -1,6 +1,6 @@
 /* Font Imports */
-@import '@fontsource-variable/inter';
-@import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/geist-mono';
 
 @custom-media --motionSafe (prefers-reduced-motion: no-preference);
 
@@ -10,7 +10,7 @@ body {
   font-weight: 400;
 }
 
-/* Essential font smoothing for Inter */
+/* Font smoothing for variable fonts */
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -181,9 +181,8 @@ code, pre, kbd, samp {
 :root,
 ::backdrop {
   /* Typography */
-  --sl-font: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  /* --sl-font:  'JetBrains Mono Variable', system-ui, sans-serif; */
-  --sl-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', 'Fira Code', ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', monospace;
+  --sl-font: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --sl-font-mono: 'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Fira Code', monospace;
   font-weight: 400;
 
   /* Typography Scale */
@@ -1067,30 +1066,6 @@ starlight-file-tree {
   background: var(--sl-color-gray-7);
 }
 
-/* ---------- Fonts ---------- */
-@font-face {
-	font-family: 'Geist';
-	src: url('../fonts/GeistVF.ttf') format('truetype-variations'),
-	     url('../fonts/GeistVF.ttf') format('truetype');
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Geist Mono';
-	src: url('../fonts/GeistMonoVF.ttf') format('truetype-variations'),
-	     url('../fonts/GeistMonoVF.ttf') format('truetype');
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
-}
-
-:root {
-	--sl-font: 'Geist', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-	--sl-font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-}
-
 /* ---------- Brand accent ---------- */
 :root,
 :root[data-theme='dark'] {
@@ -1113,6 +1088,6 @@ starlight-file-tree {
 
 /* ---------- Monospace headings ---------- */
 h1 {
-	font-family: "Geist Mono";
+	font-family: var(--sl-font-mono);
 	font-size: 2.77rem;
 }

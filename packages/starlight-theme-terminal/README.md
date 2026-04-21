@@ -2,7 +2,7 @@
 
 A customized Astro Starlight theme combining modern and retro elements. Made for the **[dssh](https://github.com/madLinux7/dssh) documentation**.
 
-![dssh documentation](dssh_docs.png)
+![dssh documentation](https://raw.githubusercontent.com/madLinux7/starlight-theme-terminal/main/dssh_docs.png)
 
 ## Let's Go!
 

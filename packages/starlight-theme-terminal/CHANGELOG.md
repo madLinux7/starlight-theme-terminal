@@ -1,5 +1,11 @@
 # starlight-theme-terminal
 
+## 1.1.1
+
+### Patch Changes
+
+- Fixed npm docs png
+
 ## 1.1.0
 
 ### Minor Changes

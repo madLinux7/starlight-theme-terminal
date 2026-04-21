@@ -81,6 +81,29 @@ import { LinkCard } from '@astrojs/starlight/components'
   <LinkCard title="Link title" href="#_" />
 </CardGrid>
 
+## FeatureGrid
+
+import FeatureGrid from 'starlight-theme-terminal/components/FeatureGrid.astro'
+
+<FeatureGrid columns={3}>
+  <Card title="Fast by default" icon="rocket">
+    Static output, zero runtime JavaScript required for the layout.
+  </Card>
+  <Card title="Themed cards" icon="seti:css">
+    Inherits the terminal color palette and monospace typography.
+  </Card>
+  <Card title="Responsive" icon="laptop">
+    Collapses to fewer columns on narrow viewports automatically.
+  </Card>
+</FeatureGrid>
+
+### FeatureGrid with link cards
+
+<FeatureGrid columns={2}>
+  <LinkCard title="Link title" href="#_" description="Card description." />
+  <LinkCard title="Link title" href="#_" description="Card description." />
+</FeatureGrid>
+
 ## Details
 
 <details>

@@ -1,5 +1,11 @@
 # starlight-theme-terminal
 
+## 1.1.0
+
+### Minor Changes
+
+- Added "Quick install", "What this theme offers", "FeatureGrid: 4 LinkCards, 4 columns" sections on hero and FeatureGrid examples in documentation
+
 ## 1.0.0
 
 ### Major Changes
@@ -7,7 +13,6 @@
 - Initial release of `starlight-theme-terminal`, a terminal-inspired Starlight theme.
 
   ### Features
-
   - Monospace headings with the Geist typeface family
   - Custom `TerminalHeader` and `ThemeSelect` component overrides
   - Reworked styling for asides, badges, cards, hero, sidebar, tabs, table of contents, markdown lists, and Expressive Code
@@ -15,7 +20,6 @@
   - High-contrast dark and light Expressive Code themes tuned to match the theme palette
 
   ### Requirements
-
   - Node.js `>=22.12.0`
   - Astro `>=6.0`
   - Starlight `>=0.38.0`

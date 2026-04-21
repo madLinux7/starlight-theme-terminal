@@ -9,18 +9,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Starlight Terminal',
-      favicon: '/favicon.svg',
-      // defaultLocale: 'en',
-      // locales: {
-      //   en: {
-      //     label: 'English',
-      //     lang: 'en',
-      //   },  
-      //   fr: {
-      //     label: 'French',
-      //     lang: 'fr',
-      //   },
-      // },
+      favicon: 'src/assets/dssh.svg',
       editLink: {
         baseUrl: 'https://github.com/madLinux7/starlight-theme-terminal/edit/main/docs/',
       },
@@ -31,8 +20,7 @@ export default defineConfig({
           label: 'Start Here',
           items: ['getting-started', 'customization', 'components-override'],
         },
-        { label: 'Examples', autogenerate: { directory: 'examples' } },
-        { label: 'Custom Components', autogenerate: { directory: 'components' } },
+        { label: 'Examples', autogenerate: { directory: 'examples' } }
       ],  
       social: [
         { href: 'https://github.com/madLinux7/starlight-theme-terminal', icon: 'github', label: 'GitHub' },

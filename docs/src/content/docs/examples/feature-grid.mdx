@@ -1,0 +1,98 @@
+---
+title: Feature Grid
+description: Responsive grid for showcasing theme features, built on top of Starlight's Card component.
+---
+
+import { Card, LinkCard } from '@astrojs/starlight/components'
+import FeatureGrid from 'starlight-theme-terminal/components/FeatureGrid.astro'
+
+The `<FeatureGrid>` component is a responsive wrapper for grouping `<Card>` or `<LinkCard>` components into a tidy grid. It collapses to fewer columns on narrow viewports automatically.
+
+## Props
+
+| Prop       | Type           | Default   | Description                                      |
+| ---------- | -------------- | --------- | ------------------------------------------------ |
+| `columns`  | `2 \| 3 \| 4`  | `2`       | Number of columns on wide viewports.             |
+| `minWidth` | `string`       | `16rem`   | Minimum width before cards reflow.               |
+| `gap`      | `string`       | `1.5rem`  | Spacing between cards.                           |
+
+## Two columns (default)
+
+<FeatureGrid>
+  <Card title="Fast by default" icon="rocket">
+    Static output, zero runtime JavaScript required for the layout.
+  </Card>
+  <Card title="Themed cards" icon="seti:css">
+    Inherits the terminal color palette and monospace typography.
+  </Card>
+</FeatureGrid>
+
+## Three columns
+
+<FeatureGrid columns={3}>
+  <Card title="Install" icon="puzzle">
+    Add the theme as a Starlight plugin in `astro.config.mjs`.
+  </Card>
+  <Card title="Configure" icon="setting">
+    Override tokens, swap fonts, or tweak the sidebar.
+  </Card>
+  <Card title="Deploy" icon="cloud-download">
+    Ship to GitHub Pages, Netlify, Vercel, or anywhere else static.
+  </Card>
+</FeatureGrid>
+
+## Four columns
+
+<FeatureGrid columns={4}>
+  <Card title="Blog" icon="pencil">
+    Release notes and announcements in one place.
+  </Card>
+  <Card title="API" icon="seti:json">
+    Reference material generated from source.
+  </Card>
+  <Card title="Guides" icon="list-format">
+    Step-by-step walkthroughs for common tasks.
+  </Card>
+  <Card title="Docs" icon="open-book">
+    Docs with full Markdown support.
+  </Card>
+</FeatureGrid>
+
+## With link cards
+
+<FeatureGrid columns={2}>
+  <LinkCard
+    title="Getting Started"
+    description="Install the theme and configure your first site."
+    href="/starlight-theme-terminal/getting-started/"
+  />
+  <LinkCard
+    title="Customization"
+    description="Tweak colors, fonts, and layout tokens."
+    href="/starlight-theme-terminal/customization/"
+  />
+  <LinkCard
+    title="Components Override"
+    description="Replace Starlight components with terminal variants."
+    href="/starlight-theme-terminal/components-override/"
+  />
+  <LinkCard
+    title="Kitchen Sink"
+    description="See every supported element rendered on one page."
+    href="/starlight-theme-terminal/examples/kitchen-sink/"
+  />
+</FeatureGrid>
+
+## Custom gap and min width
+
+<FeatureGrid columns={3} gap="0.75rem" minWidth="12rem">
+  <Card title="Tight" icon="seti:config">
+    Reduced gap for a denser layout.
+  </Card>
+  <Card title="Compact" icon="seti:config">
+    Lower `minWidth` lets more columns fit on mid-width screens.
+  </Card>
+  <Card title="Flexible" icon="seti:config">
+    Both props accept any valid CSS length.
+  </Card>
+</FeatureGrid>

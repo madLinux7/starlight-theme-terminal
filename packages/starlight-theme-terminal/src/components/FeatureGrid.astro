@@ -28,6 +28,19 @@ const { columns = 2, minWidth = '16rem', gap = '1.5rem' } = Astro.props;
     margin-top: 0 !important;
   }
 
+  .feature-grid > :global(.sl-link-card) {
+    margin-top: 0 !important;
+  }
+
+  .feature-grid :global(.card .title > span) {
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: var(--terminal-title-gradient) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
   @media (max-width: 60rem) {
     .feature-grid[data-columns="4"],
     .feature-grid[data-columns="3"] {

@@ -28,11 +28,76 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components'
+import { Card, CardGrid, Code, LinkCard, TabItem, Tabs } from '@astrojs/starlight/components'
+import FeatureGrid from '../../../../packages/starlight-theme-terminal/src/components/FeatureGrid.astro'
+
+## Quick install
+
+<Tabs syncKey="installers">
+ <TabItem label="npm" icon="seti:npm">
+  ```sh
+  npm add starlight-theme-terminal
+  ```
+ </TabItem>
+
+ <TabItem label="pnpm" icon="pnpm">
+  ```sh
+  pnpm add starlight-theme-terminal
+  ```
+ </TabItem>
+
+ <TabItem label="yarn" icon="seti:yarn">
+  ```sh
+  yarn add starlight-theme-terminal
+  ```
+ </TabItem>
+</Tabs>
+
+## What this theme offers
+
+<FeatureGrid columns={2}>
+  <Card title="FeatureGrid" icon="seti:csv">
+    Showcase your project's most relevant features using the `FeatureGrid` component shipped in this theme - used right here!
+  </Card>
+  <Card title="Zero-config setup" icon="rocket">
+    Drop it into `astro.config.mjs` and ship. No CSS overrides or token hunting required.
+  </Card>
+  <Card title="Dark and light parity" icon="moon">
+    Both modes are tuned for readability. Code blocks, callouts, and diagrams stay legible in either.
+  </Card>
+  <Card title="Starlight-native" icon="star">
+    Built on Starlight primitives. Every component, shortcode, and plugin keeps working.
+  </Card>
+</FeatureGrid>
+
+### FeatureGrid: 4 LinkCards, 4 columns
+
+<FeatureGrid columns={4}>
+  <LinkCard
+    title="FeatureGrid"
+    description="See the FeatureGrid in action!"
+    href="/starlight-theme-terminal/examples/feature-grid/"
+  />
+  <LinkCard
+    title="Customization"
+    description="Tweak colors, fonts, and layout tokens."
+    href="/starlight-theme-terminal/customization/"
+  />
+  <LinkCard
+    title="Kitchen Sink"
+    description="See every supported element on one page."
+    href="/starlight-theme-terminal/examples/kitchen-sink/"
+  />
+  <LinkCard
+    title="Hero"
+    description="A blank example Hero page."
+    href="/starlight-theme-terminal/examples/hero/"
+  />
+</FeatureGrid>
 
 ## Next steps
 
-<CardGrid stagger>
+<CardGrid>
   <Card title="Install the theme" icon="puzzle">
     Check the [getting started guide](/starlight-theme-terminal/getting-started/) for installation instructions.
   </Card>

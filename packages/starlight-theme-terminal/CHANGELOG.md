@@ -1,5 +1,11 @@
 # starlight-theme-terminal
 
+## 1.1.2
+
+### Patch Changes
+
+- Lowered @astrojs/starlight to >=0.32.0 so the demo project accepts it
+
 ## 1.1.1
 
 ### Patch Changes

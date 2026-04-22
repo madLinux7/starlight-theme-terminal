@@ -1,6 +1,6 @@
 {
   "name": "starlight-theme-terminal",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "description": "Astro Starlight theme with retro and modern elements.",
   "author": "madLinux7",
@@ -33,7 +33,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@astrojs/starlight": ">=0.38.0"
+    "@astrojs/starlight": ">=0.32.0"
   },
   "engines": {
     "node": ">=22.12.0"

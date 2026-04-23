@@ -24,9 +24,13 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* Optional: Fine-tune code block rendering */
-code, pre, kbd, samp {
-   /* Better for monospace */
+code,
+pre,
+kbd,
+samp {
+  /* Better for monospace */
   text-rendering: optimizeSpeed;
 }
 
@@ -41,7 +45,7 @@ code, pre, kbd, samp {
 
   /* Brand colors */
   --brand-primary: #D946EF;
-	--brand-secondary: #7B2FBE;
+  --brand-secondary: #7B2FBE;
 
   /* SL's main background and text color  */
   /* --sl-color-text: #c1c3c8; */
@@ -296,7 +300,7 @@ body {
   position: absolute;
   left: 0;
   bottom: -0.6rem;
-  width: 14rem;
+  width: 17rem;
   height: 3px;
   background: linear-gradient(90deg, var(--sl-color-accent), transparent);
   border-radius: var(--sl-border-radius);
@@ -330,7 +334,7 @@ body {
   --blockquote-border-accent: var(--sl-color-accent-high);
   --blockquote-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   --blockquote-text-color: var(--sl-color-gray-1);
-  --blockquote-quote-opacity: 0.3;
+  --blockquote-quote-opacity: 0.5;
   --blockquote-cite-color: var(--sl-color-gray-3);
 }
 
@@ -341,7 +345,7 @@ body {
   --blockquote-border-accent: var(--sl-color-accent);
   --blockquote-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
   --blockquote-text-color: var(--sl-color-gray-2);
-  --blockquote-quote-opacity: 0.4;
+  --blockquote-quote-opacity: 0.6;
   --blockquote-cite-color: var(--sl-color-gray-4);
 }
 
@@ -353,7 +357,7 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: var(--blockquote-border);
-  border-left: 8px solid var(--blockquote-border-accent);
+  border-left: 6px solid var(--blockquote-border-accent);
   border-bottom-right-radius: var(--sl-border-radius-lg);
   border-top-right-radius: var(--sl-border-radius-lg);
   box-shadow: var(--blockquote-shadow);
@@ -364,13 +368,15 @@ body {
   /* Quote icon */
   &::before {
     content: '"';
+    font-family: 'Geist', sans-serif !important;
     position: absolute;
-    top: 0.5rem;
-    left: 0.75rem;
-    font-size: 3rem;
+    top: 1rem;
+    left: 0.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    color: var(--sl-color-accent);
+    color: var(--brand-primary);
     opacity: var(--blockquote-quote-opacity);
+    /* opacity: .75; */
     line-height: 1;
     font-family: Georgia, serif;
   }
@@ -726,19 +732,33 @@ body {
 .sl-banner {
   position: relative;
   margin: 2rem auto 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   max-width: var(--sl-content-width);
+
+  /* Glassmorphism background */
   background: linear-gradient(135deg,
-      var(--sl-color-accent) 0%,
-      var(--sl-color-accent-high) 100%);
-  color: var(--sl-color-black);
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0.03) 100%);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+
+  /* Border & shape */
+  border: 2px solid var(--brand-primary);
+  border-radius: 0.625rem;
+
+  /* Glow shadow */
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    0 1px 6px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+
+  color: var(--sl-color-gray-1);
   text-align: center;
   line-height: 1.5;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--sl-color-accent) 20%, transparent);
   font-weight: 500;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   text-wrap: unset;
+  overflow: hidden;
 }
 
 /* Right alignment when sidebar is present */
@@ -749,42 +769,56 @@ body {
 }
 
 /* Banner links styling */
-.sl-banner :global(a) {
-  color: var(--sl-color-black) !important;
+.sl-banner :global(a),
+.sl-banner a {
+  color: var(--sl-color-white) !important;
   text-decoration: underline;
   text-underline-offset: 0.2em;
-  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-decoration-thickness: 1px;
   font-weight: 600;
   transition: all 0.2s ease;
 }
 
-.sl-banner :global(a:hover) {
-  text-decoration-color: color-mix(in srgb, var(--sl-color-black) 70%, transparent);
-  transform: translateY(-1px);
+.sl-banner :global(a:hover),
+.sl-banner a:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+  text-decoration-thickness: 2px;
 }
 
 /* Banner typography */
 .sl-banner :global(p) {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
 .sl-banner :global(strong) {
   font-weight: 700;
+  color: var(--sl-color-white);
 }
 
 /* Light theme adjustments */
 :root[data-theme='light'] .sl-banner {
-  color: var(--sl-color-black);
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--sl-color-accent) 15%, transparent);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 100%);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    0 1px 4px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 0 0 1px color-mix(in srgb, var(--sl-color-accent) 10%, transparent);
+  color: var(--sl-color-gray-2);
+}
+
+.sl-banner a {
+  color: var(--sl-color-accent-high) !important;
 }
 
 /* Responsive design */
 @media (max-width: 50rem) {
   .sl-banner {
-    padding: 0.875rem 1rem;
+    padding: 0.75rem 1rem;
     font-size: 0.875rem;
   }
 
@@ -1069,25 +1103,32 @@ starlight-file-tree {
 /* ---------- Brand accent ---------- */
 :root,
 :root[data-theme='dark'] {
-	--sl-color-accent-low: #2a0b44;
-	--sl-color-accent: var(--brand-secondary);
-	--sl-color-accent-high: #E9B8F5;
+  --sl-color-accent-low: #2a0b44;
+  --sl-color-accent: var(--brand-secondary);
+  --sl-color-accent-high: #E9B8F5;
 }
 
 :root[data-theme='light'] {
-	--sl-color-accent-low: #f3e6ff;
-	--sl-color-accent: var(--brand-secondary);
-	--sl-color-accent-high: #4a1273;
+  --sl-color-accent-low: #f3e6ff;
+  --sl-color-accent: var(--brand-secondary);
+  --sl-color-accent-high: #4a1273;
 }
 
 /* ---------- Text selection ---------- */
 ::selection {
-	background-color: var(--brand-primary);
-	color: #fff;
+  background-color: var(--brand-primary);
+  color: #fff;
 }
 
 /* ---------- Monospace headings ---------- */
 h1 {
-	font-family: var(--sl-font-mono);
-	font-size: 2.77rem;
+  font-family: var(--sl-font-mono);
+  font-size: 2.77rem;
+  background: linear-gradient(135deg,
+      var(--sl-color-white) 0%,
+      var(--sl-color-accent-high) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

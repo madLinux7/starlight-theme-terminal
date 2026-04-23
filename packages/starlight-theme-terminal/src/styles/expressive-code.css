@@ -15,6 +15,18 @@
   box-shadow: var(--sl-shadow-sm);
 }
 
+.expressive-code .ec-line.mark {
+  background: oklch(.5351 .2523 294 / .4);
+}
+
+.expressive-code .ec-line.mark .code {
+  --ecLineBrdCol: #8b5cf6 !important;
+}
+
+.expressive-code .ec-line.mark .code::before {
+  --ecLineBrdCol: #8b5cf6d0 !important;
+}
+
 /* CodeBlock overrides */
 .sl-markdown-content .expressive-code .ec-line {
   margin-block-start: initial;
@@ -70,13 +82,12 @@ pre.astro-code {
 .expressive-code code {
   /* font-family: var(--sg-ec-font-family); */
   font-weight: 400;
-  font-feature-settings: "liga" 0, "calt" 0;  
+  font-feature-settings: "liga" 0, "calt" 0;
   box-sizing: border-box;
-  display: block;  
+  display: block;
   width: 100%;
 }
 
-.expressive-code + p {
-  /* color: red !important; */
+.expressive-code+p {
   margin-bottom: 16px;
 }

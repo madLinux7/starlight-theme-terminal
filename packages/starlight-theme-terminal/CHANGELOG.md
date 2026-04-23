@@ -1,5 +1,24 @@
 # starlight-theme-terminal
 
+## 1.2.0
+
+### Minor Changes
+
+- retheme tip/note badges and banner, polish blockquote
+  - asides.css: switch .starlight-aside--tip accent from emerald green
+    to cyan (#06b6d4) across light, dark, and high-contrast modes
+  - badges.css: align badge colors with aside variants
+    · .sl-badge.tip → cyan (#22d3ee / #0891b2)
+    · .sl-badge.note → violet/purple (#a78bfa / #7c3aed)
+    Updated base, light-theme, and high-contrast sections for both
+  - terminal-main.css: redesign .sl-banner
+    · Replace flat purple gradient fill with glassmorphism card
+      (translucent bg, backdrop-blur, brand-primary border)
+    · Fix link visibility: use --sl-color-accent-high with direct
+      .sl-banner a selector (alongside :global) for reliable matching
+    · Blockquote tweaks: quote icon uses brand-primary color,
+      smaller font (1.75rem), higher opacity; left border 6px
+
 ## 1.1.2
 
 ### Patch Changes

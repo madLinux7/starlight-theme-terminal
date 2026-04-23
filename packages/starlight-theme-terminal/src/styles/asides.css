@@ -45,15 +45,15 @@
   box-shadow: var(--terminal-aside-shadow);
   transition: var(--terminal-aside-transition);
   overflow: hidden;
-  
+
   /* Modern backdrop blur effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  
+
   /* Accent border on the left */
   border-left: var(--terminal-aside-accent-width) solid var(--terminal-aside-accent);
   padding-left: calc(var(--terminal-aside-padding) + var(--terminal-aside-accent-width));
-  
+
   /* Subtle inner glow */
   &::before {
     content: '';
@@ -63,26 +63,26 @@
     right: 0;
     height: 1px;
     background: linear-gradient(90deg,
-      transparent 0%,
-      var(--terminal-aside-accent) 50%,
-      transparent 100%);
+        transparent 0%,
+        var(--terminal-aside-accent) 50%,
+        transparent 100%);
     opacity: 0.6;
   }
-  
+
   /* Hover effect for interactivity */
   &:hover {
     box-shadow: var(--terminal-aside-shadow-hover);
   }
-  
+
   /* Content styling */
-  & > *:first-child {
+  &>*:first-child {
     margin-top: 0;
   }
-  
-  & > *:last-child {
+
+  &>*:last-child {
     margin-bottom: 0;
   }
-  
+
   /* Links styling */
   & a {
     color: var(--terminal-aside-accent);
@@ -90,13 +90,13 @@
     text-decoration-color: transparent;
     text-underline-offset: 0.2em;
     transition: var(--terminal-aside-transition);
-    
+
     &:hover {
       text-decoration-color: var(--terminal-aside-accent);
       text-decoration-thickness: 2px;
     }
   }
-  
+
   /* Code blocks */
   & code {
     background: var(--terminal-aside-code-bg);
@@ -106,7 +106,7 @@
     font-size: 0.85em;
     border: 1px solid var(--terminal-aside-border);
   }
-  
+
   /* Pre-formatted code */
   & pre {
     background: var(--terminal-aside-code-bg);
@@ -114,7 +114,7 @@
     border-radius: 0.5rem;
     padding: 1rem;
     overflow-x: auto;
-    
+
     & code {
       background: transparent;
       border: none;
@@ -146,8 +146,8 @@
     flex-grow: 1;
     height: 1px;
     background: linear-gradient(90deg,
-      var(--terminal-aside-accent) 0%,
-      transparent 100%);
+        var(--terminal-aside-accent) 0%,
+        transparent 100%);
     margin-left: 0.75rem;
     opacity: 0.3;
   }
@@ -169,36 +169,45 @@
  * ============================ */
 
 .starlight-aside--note {
-  --terminal-aside-accent: #3b82f6;
-  --terminal-aside-bg: rgba(59, 130, 246, 0.05);
-  --terminal-aside-border: rgba(59, 130, 246, 0.2);
+  --terminal-aside-accent: #8b5cf6;
+  --terminal-aside-bg: rgba(139, 92, 246, 0.05);
+  --terminal-aside-border: rgba(139, 92, 246, 0.2);
   --terminal-aside-text: var(--sl-color-text);
-  --terminal-aside-code-bg: rgba(59, 130, 246, 0.08);
-  
+  --terminal-aside-code-bg: rgba(139, 92, 246, 0.08);
+
+  /* Gradient border for premium feel */
+  background: linear-gradient(135deg,
+      rgba(139, 92, 246, 0.05) 0%,
+      rgba(168, 85, 247, 0.03) 100%);
+
   /* Dark theme adjustments */
   :root[data-theme='dark'] & {
-    --terminal-aside-bg: rgba(59, 130, 246, 0.08);
-    --terminal-aside-border: rgba(59, 130, 246, 0.25);
-    --terminal-aside-code-bg: rgba(59, 130, 246, 0.12);
+    --terminal-aside-bg: rgba(139, 92, 246, 0.08);
+    --terminal-aside-border: rgba(139, 92, 246, 0.25);
+    --terminal-aside-code-bg: rgba(139, 92, 246, 0.12);
+
+    background: linear-gradient(135deg,
+        rgba(139, 92, 246, 0.08) 0%,
+        rgba(168, 85, 247, 0.05) 100%);
   }
 }
 
 /* ============================
- * Tip variant (Green - Success/Helpful)
+ * Tip variant (Cyan - Success/Helpful)
  * ============================ */
 
 .starlight-aside--tip {
-  --terminal-aside-accent: #10b981;
-  --terminal-aside-bg: rgba(16, 185, 129, 0.05);
-  --terminal-aside-border: rgba(16, 185, 129, 0.2);
+  --terminal-aside-accent: #06b6d4;
+  --terminal-aside-bg: rgba(6, 182, 212, 0.05);
+  --terminal-aside-border: rgba(6, 182, 212, 0.2);
   --terminal-aside-text: var(--sl-color-text);
-  --terminal-aside-code-bg: rgba(16, 185, 129, 0.08);
-  
+  --terminal-aside-code-bg: rgba(6, 182, 212, 0.08);
+
   /* Dark theme adjustments */
   :root[data-theme='dark'] & {
-    --terminal-aside-bg: rgba(16, 185, 129, 0.08);
-    --terminal-aside-border: rgba(16, 185, 129, 0.25);
-    --terminal-aside-code-bg: rgba(16, 185, 129, 0.12);
+    --terminal-aside-bg: rgba(6, 182, 212, 0.08);
+    --terminal-aside-border: rgba(6, 182, 212, 0.25);
+    --terminal-aside-code-bg: rgba(6, 182, 212, 0.12);
   }
 }
 
@@ -212,7 +221,7 @@
   --terminal-aside-border: rgba(245, 158, 11, 0.2);
   --terminal-aside-text: var(--sl-color-text);
   --terminal-aside-code-bg: rgba(245, 158, 11, 0.08);
-  
+
   /* Dark theme adjustments */
   :root[data-theme='dark'] & {
     --terminal-aside-bg: rgba(245, 158, 11, 0.08);
@@ -231,40 +240,12 @@
   --terminal-aside-border: rgba(239, 68, 68, 0.2);
   --terminal-aside-text: var(--sl-color-text);
   --terminal-aside-code-bg: rgba(239, 68, 68, 0.08);
-  
+
   /* Dark theme adjustments */
   :root[data-theme='dark'] & {
     --terminal-aside-bg: rgba(239, 68, 68, 0.08);
     --terminal-aside-border: rgba(239, 68, 68, 0.25);
     --terminal-aside-code-bg: rgba(239, 68, 68, 0.12);
-  }
-}
-
-/* ============================
- * Premium variant (Purple - Premium/Pro)
- * ============================ */
-
-.starlight-aside--premium {
-  --terminal-aside-accent: #8b5cf6;
-  --terminal-aside-bg: rgba(139, 92, 246, 0.05);
-  --terminal-aside-border: rgba(139, 92, 246, 0.2);
-  --terminal-aside-text: var(--sl-color-text);
-  --terminal-aside-code-bg: rgba(139, 92, 246, 0.08);
-  
-  /* Gradient border for premium feel */
-  background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.05) 0%, 
-    rgba(168, 85, 247, 0.03) 100%);
-  
-  /* Dark theme adjustments */
-  :root[data-theme='dark'] & {
-    --terminal-aside-bg: rgba(139, 92, 246, 0.08);
-    --terminal-aside-border: rgba(139, 92, 246, 0.25);
-    --terminal-aside-code-bg: rgba(139, 92, 246, 0.12);
-    
-    background: linear-gradient(135deg, 
-      rgba(139, 92, 246, 0.08) 0%, 
-      rgba(168, 85, 247, 0.05) 100%);
   }
 }
 
@@ -276,15 +257,16 @@
   .starlight-aside {
     --terminal-aside-padding: 0.875rem;
     margin: 1.25rem 0;
-    
+
     &:hover {
-      transform: none; /* Disable hover transform on mobile */
+      transform: none;
+      /* Disable hover transform on mobile */
     }
   }
-  
+
   .starlight-aside__title {
     font-size: 0.9rem;
-    
+
     &::after {
       margin-left: 0.5rem;
     }
@@ -298,7 +280,7 @@
 @media (prefers-reduced-motion: reduce) {
   .starlight-aside {
     transition: none;
-    
+
     &:hover {
       transform: none;
     }
@@ -337,11 +319,11 @@
     -webkit-backdrop-filter: none;
     border: 2px solid var(--terminal-aside-accent);
     background: transparent;
-    
+
     &:hover {
       transform: none;
     }
-    
+
     &::before {
       display: none;
     }

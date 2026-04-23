@@ -1,5 +1,11 @@
 # starlight-theme-terminal
 
+## 1.2.0
+
+### Minor Changes
+
+- retheme tip/note badges and banner, polish blockquote
+
 ## 1.1.2
 
 ### Patch Changes

@@ -2,9 +2,6 @@
 @import '@fontsource-variable/geist';
 @import '@fontsource-variable/geist-mono';
 
-@custom-media --motionSafe (prefers-reduced-motion: no-preference);
-
-
 html,
 body {
   font-weight: 400;
@@ -285,19 +282,19 @@ body {
 }
 
 .sl-markdown-content h2 {
+  position: relative;
   font-size: var(--sl-text-3xl);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--sl-color-gray-1);
   margin-block: var(--sl-spacing-2xl) var(--sl-spacing-lg);
-  position: relative;
 }
 
 /* H2 accent underline */
 .sl-markdown-content h2::before {
-  content: '';
   position: absolute;
+  content: '';
   left: 0;
   bottom: -0.6rem;
   width: 17rem;
@@ -769,7 +766,6 @@ body {
 }
 
 /* Banner links styling */
-.sl-banner :global(a),
 .sl-banner a {
   color: var(--sl-color-white) !important;
   text-decoration: underline;
@@ -780,20 +776,19 @@ body {
   transition: all 0.2s ease;
 }
 
-.sl-banner :global(a:hover),
 .sl-banner a:hover {
   text-decoration-color: rgba(255, 255, 255, 0.9);
   text-decoration-thickness: 2px;
 }
 
 /* Banner typography */
-.sl-banner :global(p) {
+.sl-banner p {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.5;
 }
 
-.sl-banner :global(strong) {
+.sl-banner strong {
   font-weight: 700;
   color: var(--sl-color-white);
 }
@@ -822,7 +817,7 @@ body {
     font-size: 0.875rem;
   }
 
-  .sl-banner :global(p) {
+  .sl-banner p {
     font-size: 0.875rem;
   }
 }
@@ -838,11 +833,11 @@ body {
     transform: none;
   }
 
-  .sl-banner :global(a) {
+  .sl-banner a {
     transition: none;
   }
 
-  .sl-banner :global(a:hover) {
+  .sl-banner a:hover {
     transform: none;
   }
 }

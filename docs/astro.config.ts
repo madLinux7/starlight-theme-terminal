@@ -20,7 +20,7 @@ export default defineConfig({
           label: 'Start Here',
           items: ['getting-started', 'customization', 'components-override'],
         },
-        { label: 'Examples', autogenerate: { directory: 'examples' } }
+        { label: 'Examples', items: [{ autogenerate: { directory: 'examples' } }] }
       ],  
       social: [
         { href: 'https://github.com/madLinux7/starlight-theme-terminal', icon: 'github', label: 'GitHub' },

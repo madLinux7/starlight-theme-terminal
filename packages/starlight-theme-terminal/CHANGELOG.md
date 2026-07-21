@@ -1,5 +1,11 @@
 # starlight-theme-terminal
 
+## 1.2.1
+
+### Patch Changes
+
+- [`73f46ec`](https://github.com/madLinux7/starlight-theme-terminal/commit/73f46ec59c443160c58c5bbba1b967babee01753) Thanks [@madLinux7](https://github.com/madLinux7)! - Astro 7 and Starlight 0.41 compatibility; Removed deprecated CSS syntax that caused build warnings.
+
 ## 1.2.0
 
 ### Minor Changes
@@ -13,11 +19,11 @@
     Updated base, light-theme, and high-contrast sections for both
   - terminal-main.css: redesign .sl-banner
     · Replace flat purple gradient fill with glassmorphism card
-      (translucent bg, backdrop-blur, brand-primary border)
+    (translucent bg, backdrop-blur, brand-primary border)
     · Fix link visibility: use --sl-color-accent-high with direct
-      .sl-banner a selector (alongside :global) for reliable matching
+    .sl-banner a selector (alongside :global) for reliable matching
     · Blockquote tweaks: quote icon uses brand-primary color,
-      smaller font (1.75rem), higher opacity; left border 6px
+    smaller font (1.75rem), higher opacity; left border 6px
 
 ## 1.1.2
 

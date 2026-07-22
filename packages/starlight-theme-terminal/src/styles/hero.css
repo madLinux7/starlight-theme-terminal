@@ -116,18 +116,29 @@
   .hero .stack {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: clamp(1rem, 3vw, 1.5rem);
     width: 100%;
+    order: 1;
   }
   
   .hero .copy {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     width: 100%;
     max-width: 800px;
+  }
+
+  .hero > img,
+  .hero > .hero-html {
+    order: 2;
+    margin-inline: auto;
+  }
+
+  .hero [data-page-title] {
+    text-align: center;
   }
   
   /* Professional Action Buttons */
@@ -135,7 +146,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
   
@@ -218,9 +229,61 @@
       align-items: flex-start;
       text-align: left;
     }
+
+    .hero .stack,
+    .hero > img,
+    .hero > .hero-html {
+      order: initial;
+    }
+
+    .hero [data-page-title] {
+      text-align: left;
+    }
     
     .hero .actions {
       justify-content: flex-start;
+    }
+  }
+
+  /* Mobile hero: keep the call to action and artwork together without
+     turning the opening section into a full-screen poster. */
+  @media (max-width: 50rem) {
+    .hero {
+      gap: 1.5rem;
+      min-height: 0;
+      padding: 2.5rem 1.25rem 3rem;
+      margin-top: 0;
+    }
+
+    .hero .stack {
+      gap: 1rem;
+    }
+
+    .hero [data-page-title] {
+      font-size: clamp(2.25rem, 11vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .actions {
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+    }
+
+    .hero .actions .action {
+      padding: 0.625rem 1rem;
+      font-size: 0.875rem;
+      white-space: nowrap;
+    }
+
+    [data-has-hero] .hero > img,
+    .hero > img {
+      width: min(60vw, 15rem);
+      margin-top: 24px;
     }
   }
   

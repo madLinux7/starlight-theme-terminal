@@ -90,17 +90,17 @@
 
   /* Hover effects for primary */
   .sl-link-button.primary:hover {
-    transform: translateY(-1px);
-	  box-shadow: 0 8px 24px rgba(217, 70, 239, 0.35);
+    transform: translateY(-2px);
+	  /* box-shadow: 0 8px 24px rgba(217, 70, 239, 0.35); */
   }
 
-  .sl-link-button.primary:hover::before {
+  /* .sl-link-button.primary:hover::before {
     background: linear-gradient(90deg,
       transparent,
       rgba(255, 255, 255, 0.6),
       transparent);
     height: 2px;
-  }
+  } */
 
   .sl-link-button.primary:hover svg {
     transform: scale(1.1);
